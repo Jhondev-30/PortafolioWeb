@@ -1,721 +1,1997 @@
-<!DOCTYPE html>
-<html lang="es" data-theme="red">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Jhon Alex Cordero Perozo — Desarrollador Full Stack. Portafolio profesional con proyectos backend, APIs REST y soluciones de nivel productivo." />
-<meta name="theme-color" content="#f5f5f7" />
-<title>Jhon Alex Cordero — Full Stack Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..700&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..700&display=swap" media="print" onload="this.media='all'" />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..700&display=swap" /></noscript>
-<link rel="stylesheet" href="styles.css" />
-<script src="assets/three.min.js" defer></script>
-</head>
-<body>
-
-<!-- Navbar -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo" aria-label="Inicio">
-      <span class="logo-mark">⟨/⟩</span>
-      <span class="logo-text">Jhon.dev</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#proyectos" data-text="Proyectos">Proyectos</a></li>
-      <li><a href="#skills" data-text="Habilidades">Habilidades</a></li>
-      <li><a href="#experiencia" data-text="Trayectoria">Trayectoria</a></li>
-      <li><a href="#certificaciones" data-text="Certificaciones">Certificaciones</a></li>
-      <li><a href="#contacto" data-text="Contacto">Contacto</a></li>
-    </ul>
-    <a href="https://github.com/Jhondev-30" target="_blank" rel="noopener" class="nav-cta">
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-      GitHub
-    </a>
-    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-      <span class="theme-toggle-icon" aria-hidden="true"></span>
-      <span class="theme-toggle-label" id="themeLabel">Red</span>
-    </button>
-    <button class="nav-burger" id="navBurger" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-bg-layer" aria-hidden="true"></div>
-
-  <div class="hero-split">
-    <div class="hero-left">
-      <div class="hero-badge" data-reveal data-parallax="0.05">
-        <span class="status-dot"></span>
-        <span>Disponible para remoto · Tiempo completo</span>
-      </div>
-
-      <h1 class="hero-title" data-reveal>
-        <span class="line line-1">Diseñador</span>
-        <span class="line line-2">de sistemas</span>
-        <span class="line line-3"><em>backend</em> que</span>
-        <span class="line line-4">mueven negocios.</span>
-      </h1>
-
-      <div class="hero-meta" data-reveal>
-        <p class="hero-subtitle">
-          Soy <strong>Jhon Alex Cordero</strong>, desarrollador Full Stack con 3+ años
-          construyendo APIs REST, sistemas contenerizados y bases de datos relacionales
-          que resuelven problemas reales de operaciones.
-        </p>
-        <div class="hero-ctas">
-          <a href="#proyectos" class="btn btn-primary">
-            Ver proyectos
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="mailto:jhonalexcorderoperozo@gmail.com" class="btn btn-ghost">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6"/></svg>
-            Contactar
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-stats" data-reveal>
-        <div class="stat">
-          <div class="stat-num"><span data-count="3">0</span><span class="stat-plus">+</span></div>
-          <div class="stat-label">Años construyendo</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num"><span data-count="7">0</span><span class="stat-plus">+</span></div>
-          <div class="stat-label">Módulos productivos</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num"><span data-count="5">0</span></div>
-          <div class="stat-label">Certificaciones</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num"><span data-count="4">0</span><span class="stat-plus">+</span></div>
-          <div class="stat-label">Repositorios públicos</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-right" data-reveal>
-      <div class="hero-3d-wrapper">
-        <canvas id="hero-3d">
-          <p style="padding:20px;color:#86868b;">Tu navegador no soporta WebGL. Probá con Chrome o Edge actualizados.</p>
-        </canvas>
-        <div class="hero-3d-fallback" id="hero-3d-fallback" hidden>
-          <div class="fb-illust">
-            <div class="fb-monitor">
-              <div class="fb-screen">
-                <div class="fb-line"></div>
-                <div class="fb-line short"></div>
-                <div class="fb-line"></div>
-                <div class="fb-line short"></div>
-              </div>
-            </div>
-            <div class="fb-desk"></div>
-            <div class="fb-figure">
-              <div class="fb-head"></div>
-              <div class="fb-body"></div>
-            </div>
-          </div>
-          <p>Render 3D no disponible · Tu navegador bloqueó WebGL</p>
-        </div>
-        <div class="hero-3d-hint" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 4v5h5"/></svg>
-          Mueve el cursor para orbitar
-        </div>
-    <div class="hero-3d-card" data-parallax="0.08">
-        <span class="card-eyebrow">build.log</span>
-          <div class="card-row"><span class="d-ok">✓</span> <span>auth module compiled</span></div>
-          <div class="card-row"><span class="d-ok">✓</span> <span>6 routes migrated</span></div>
-          <div class="card-row"><span class="d-run">▸</span> <span>running on :3000</span></div>
-          <div class="card-row dim"><span>docker-compose up</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT / PROFILE -->
-<section class="section about" id="about">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="kicker">01 — Perfil</span>
-      <h2 class="section-title">Backend que resuelve<br/>problemas de negocio reales.</h2>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-text" data-reveal>
-        <p class="lead">
-          Más de <strong>3 años</strong> diseñando sistemas backend escalables, APIs REST
-          y bases de datos relacionales para negocios que necesitaban <em>transformación digital</em>.
-        </p>
-        <p>
-          Me especializo en <strong>Node.js</strong> y <strong>Go</strong> para ingeniería
-          de APIs, con foco en arquitectura limpia, seguridad (<strong>JWT/RBAC</strong>) y
-          despliegues contenerizados con Docker.
-        </p>
-        <p>
-          No construyo demos: entrego <strong>sistemas de nivel productivo</strong> que
-          automatizan operaciones reales — desde control de acceso físico hasta gestión
-          de inventarios y puntos de venta.
-        </p>
-        <div class="about-tags">
-          <span class="tag">Backend escalable</span>
-          <span class="tag">Arquitectura limpia</span>
-          <span class="tag">Seguridad por diseño</span>
-          <span class="tag">Contenerización</span>
-        </div>
-      </div>
-
-      <aside class="about-info" data-reveal>
-        <div class="info-row">
-          <span class="info-label">Base</span>
-          <span class="info-value">Barquisimeto, Venezuela</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Modalidad</span>
-          <span class="info-value">Remoto global</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Formación</span>
-          <span class="info-value">Ing. Informática · UCLA</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Idiomas</span>
-          <span class="info-value">Español nativo · Inglés B2</span>
-        </div>
-        <div class="info-row">
-          <span class="info-label">Stack principal</span>
-          <span class="info-value">Node · Go · PostgreSQL · Docker</span>
-        </div>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- PROYECTOS — BENTO GRID -->
-<section class="section projects" id="proyectos">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="kicker">02 — Proyectos</span>
-      <h2 class="section-title">Una selección<br/>del trabajo reciente.</h2>
-      <p class="section-sub">Cada proyecto resuelve un problema real, no es un tutorial copiado.</p>
-    </div>
-
-    <div class="bento" data-reveal>
-
-      <!-- BENTO: SmartGym (large, 2 cols) -->
-      <article class="bento-card bento-lg">
-        <div class="bento-header">
-          <div class="bento-meta">
-            <span class="bento-tag">★ Proyecto destacado</span>
-            <h3 class="bento-title">SmartGym</h3>
-            <p class="bento-sub">Plataforma API para gestión integral de gimnasios</p>
-          </div>
-          <a href="https://github.com/Jhondev-30/API-Smartgym" target="_blank" rel="noopener" class="bento-link">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-        </div>
-
-        <div class="bento-visual">
-          <div class="mockup-window">
-            <div class="mockup-titlebar">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              <span class="mockup-url">api.smartgym.local/api-docs</span>
-            </div>
-            <div class="mockup-body">
-              <div class="api-panel">
-                <div class="api-side">
-                  <div class="api-side-title">Endpoints</div>
-                  <div class="api-endpoint"><span class="verb get">GET</span> /api/users</div>
-                  <div class="api-endpoint"><span class="verb post">POST</span> /api/auth/login</div>
-                  <div class="api-endpoint active"><span class="verb get">GET</span> /api/clases</div>
-                  <div class="api-endpoint"><span class="verb post">POST</span> /api/reservas</div>
-                  <div class="api-endpoint"><span class="verb get">GET</span> /membresias/:cedula</div>
-                  <div class="api-endpoint"><span class="verb post">POST</span> /api/finances</div>
-                </div>
-                <div class="api-main">
-                  <div class="api-tabs">
-                    <span class="api-tab active">200 OK</span>
-                    <span class="api-tab">Schema</span>
-                  </div>
-                  <pre class="api-code"><code><span class="c-b">{</span>
-  <span class="c-k">"id"</span>: <span class="c-s">"cl_4827"</span>,
-  <span class="c-k">"nombre"</span>: <span class="c-s">"CrossFit"</span>,
-  <span class="c-k">"entrenador"</span>: <span class="c-s">"Carlos M."</span>,
-  <span class="c-k">"horario"</span>: <span class="c-s">"Lun-Mie 18:00"</span>,
-  <span class="c-k">"cupos_disponibles"</span>: <span class="c-n">8</span>,
-  <span class="c-k">"conflict_check"</span>: <span class="c-b">true</span><span class="c-p">,</span>
-  <span class="c-k">"membresia"</span>: <span class="c-s">"activa"</span>
-<span class="c-b">}</span></code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-body">
-          <ul class="bento-features">
-            <li><strong>Identidad multi-rol.</strong> JWT + RBAC con perfiles de Admin, Finanzas, Entrenadores y Clientes.</li>
-            <li><strong>Motor de reservas.</strong> Detección de conflictos a nivel de base de datos: imposible inscribirse dos veces al mismo horario.</li>
-            <li><strong>Acceso físico por cédula.</strong> Validación de membresía en tiempo real con respuestas 409 Conflict.</li>
-            <li><strong>Finanzas y POS.</strong> Planes, suscripciones, inventario con ticketing y punto de venta integrado.</li>
-            <li><strong>Despliegue.</strong> <code>docker-compose</code> levanta toda la plataforma con un solo comando.</li>
-          </ul>
-          <div class="bento-stack">
-            <span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>REST</span><span>JWT</span><span>Swagger</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- BENTO: Presencia Digital -->
-      <article class="bento-card bento-md">
-        <div class="bento-header">
-          <div class="bento-meta">
-            <span class="bento-tag subtle">Web</span>
-            <h3 class="bento-title">Presencia Digital</h3>
-            <p class="bento-sub">Sitios web estáticos para negocios locales</p>
-          </div>
-        </div>
-        <div class="bento-mini-visual mini-browser">
-          <div class="mini-bar"><span></span><span></span><span></span></div>
-          <div class="mini-content">
-            <div class="mini-line w60"></div>
-            <div class="mini-line w80"></div>
-            <div class="mini-line w50"></div>
-            <div class="mini-grid">
-              <div></div><div></div><div></div>
-            </div>
-          </div>
-        </div>
-        <div class="bento-body">
-          <p class="bento-text">Identifiqué la brecha de visibilidad online en negocios locales y entregué sitios web responsivos y orientados a SEO con HTML5 semántico y CSS3 moderno.</p>
-          <div class="bento-stack">
-            <span>HTML5</span><span>CSS3</span><span>SEO</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- BENTO: Pizzería Luigi's -->
-      <article class="bento-card bento-sm">
-        <div class="bento-header">
-          <div class="bento-meta">
-            <h3 class="bento-title-sm">Pizzería Luigi's</h3>
-          </div>
-          <a href="https://github.com/Jhondev-30/pizzeria-luigis" target="_blank" rel="noopener" class="bento-link-sm">↗</a>
-        </div>
-        <div class="bento-mini-visual mini-pizza">
-          <div class="pizza-base">🍕</div>
-          <div class="pizza-meta">
-            <span>Margherita</span>
-            <span>Pepperoni</span>
-            <span>Quattro Formaggi</span>
-            <span>Hawaiana</span>
-          </div>
-        </div>
-        <div class="bento-body-sm">
-          <p>Sitio web responsive para un negocio gastronómico local.</p>
-          <div class="bento-stack">
-            <span>HTML5</span><span>CSS3</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- BENTO: Maquetación -->
-      <article class="bento-card bento-sm">
-        <div class="bento-header">
-          <div class="bento-meta">
-            <h3 class="bento-title-sm">Maquetación Web</h3>
-          </div>
-          <a href="https://github.com/Jhondev-30/maquetacion-de-sitio-web" target="_blank" rel="noopener" class="bento-link-sm">↗</a>
-        </div>
-        <div class="bento-mini-visual mini-grid-art">
-          <div></div><div></div><div></div>
-          <div></div><div></div><div></div>
-        </div>
-        <div class="bento-body-sm">
-          <p>Prácticas de maquetación con CSS3 moderno, layouts complejos y diseño responsivo.</p>
-          <div class="bento-stack">
-            <span>HTML5</span><span>CSS3</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- BENTO: Batalla Naval -->
-      <article class="bento-card bento-sm">
-        <div class="bento-header">
-          <div class="bento-meta">
-            <h3 class="bento-title-sm">Batalla Naval</h3>
-          </div>
-          <a href="https://github.com/Jhondev-30/Battleship-programming-III" target="_blank" rel="noopener" class="bento-link-sm">↗</a>
-        </div>
-        <div class="bento-mini-visual mini-battle">
-          <div class="ocean">
-            <span>⛵</span><span>⛵</span><span>⛵</span>
-            <span>⛵</span><span>⛵</span>
-            <span class="boom">💥</span>
-          </div>
-        </div>
-        <div class="bento-body-sm">
-          <p>Juego en Python para Programación III · UCLA · trabajo en equipo.</p>
-          <div class="bento-stack">
-            <span>Python</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section skills" id="skills">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="kicker">03 — Habilidades</span>
-      <h2 class="section-title">Lo que uso<br/>para construir.</h2>
-    </div>
-
-    <div class="skills-bento" data-reveal>
-      <div class="sk-card sk-lang">
-        <div class="sk-head">
-          <span class="sk-num">01</span>
-          <h3>Lenguajes</h3>
-        </div>
-        <ul class="sk-list">
-          <li>
-            <span class="sk-name">JavaScript ES6+</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">SQL</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">HTML5 / CSS3</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">Go (Golang)</span>
-            <span class="sk-level intermediate">Intermedio</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sk-card sk-back">
-        <div class="sk-head">
-          <span class="sk-num">02</span>
-          <h3>Backend & APIs</h3>
-        </div>
-        <ul class="sk-list">
-          <li>
-            <span class="sk-name">Node.js</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">Express</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">Diseño de APIs REST</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">JWT / RBAC</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sk-card sk-data">
-        <div class="sk-head">
-          <span class="sk-num">03</span>
-          <h3>Datos</h3>
-        </div>
-        <ul class="sk-list">
-          <li>
-            <span class="sk-name">PostgreSQL</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">Modelado relacional</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">Índices y migraciones</span>
-            <span class="sk-level intermediate">Intermedio</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sk-card sk-tools">
-        <div class="sk-head">
-          <span class="sk-num">04</span>
-          <h3>Herramientas</h3>
-        </div>
-        <ul class="sk-list">
-          <li>
-            <span class="sk-name">Docker · Docker Compose</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">Git · GitHub</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-          <li>
-            <span class="sk-name">Swagger / OpenAPI</span>
-            <span class="sk-level advanced">Avanzado</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sk-card sk-learning">
-        <div class="sk-head">
-          <span class="sk-num">05</span>
-          <h3>En aprendizaje</h3>
-        </div>
-        <p class="sk-learning-text">Stack moderno que estoy incorporando a mi flujo de trabajo.</p>
-        <div class="learning-tags">
-          <span class="learn-tag">Astro</span>
-          <span class="learn-tag">TypeScript</span>
-          <span class="learn-tag">NestJS</span>
-          <span class="learn-tag">Go Fiber</span>
-          <span class="learn-tag">Gin</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Carrusel infinito de logos -->
-    <div class="tech-carousel" data-reveal>
-      <div class="tech-track-wrap">
-        <div class="tech-track" id="techTrack">
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="JavaScript"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/></svg></div><div class="tech-name">JavaScript</div></div>
+<!DOCTYPE html>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Node.js"><path d="M12 1.5L.831 7.762v8.476L12 22.5l11.169-6.262V7.762L12 1.5zm9.402 13.61l-9.402 5.272-9.402-5.272V8.89L12 3.618l9.402 5.272v6.22zM9.831 9.858l1.078-.621 1.078.621v1.243l-1.078.621-1.078-.621V9.858zm4.312 4.349l-1.078.621-1.078-.621v-1.243l1.078-.621 1.078.621v1.243z"/></svg></div><div class="tech-name">Node.js</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="PostgreSQL"><path d="M23.561 11.971l-1.495-.467c.04-.39.06-.785.06-1.185s-.02-.795-.06-1.185l1.495-.467a.474.474 0 0 0 .297-.604l-1.4-4.05a.5.5 0 0 0-.604-.297l-1.555.46a8.13 8.13 0 0 0-1.836-1.06l-.236-1.59a.475.475 0 0 0-.547-.396L13.65 1.7a.474.474 0 0 0-.396.547l.214 1.59a8.13 8.13 0 0 0-1.945.832l-1.19-1.13a.475.475 0 0 0-.66.043L7.225 5.74a.475.475 0 0 0 .043.66l1.13 1.19a8.13 8.13 0 0 0-.832 1.945l-1.59.214a.474.474 0 0 0-.396.547l1.072 3.928a.474.474 0 0 0 .547.396l1.59-.214a8.13 8.13 0 0 0 1.06 1.836l-.46 1.555a.475.475 0 0 0 .297.604l4.05 1.4a.5.5 0 0 0 .604-.297l.467-1.495c.39.04.785.06 1.185.06s.795-.02 1.185-.06l.467 1.495a.474.474 0 0 0 .604.297l4.05-1.4a.475.475 0 0 0 .297-.604l-.46-1.555a8.13 8.13 0 0 0 1.06-1.836l1.59-.236a.475.475 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13a8.13 8.13 0 0 0-1.945-.832L15.83 2.247a.474.474 0 0 0-.547-.396l-3.928 1.072a.474.474 0 0 0-.396.547l.236 1.59a8.13 8.13 0 0 0-1.836 1.06L8.78 4.66a.5.5 0 0 0-.297.604l1.4 4.05a.474.474 0 0 0 .604.297l1.555-.46a8.13 8.13 0 0 0 1.06 1.836l-.236 1.59a.475.475 0 0 0 .396.547l3.928 1.072a.474.474 0 0 0 .547-.396l.214-1.59a8.13 8.13 0 0 0 1.945-.832l1.19 1.13a.475.475 0 0 0 .66-.043l1.448-1.554a.475.475 0 0 0-.043-.66l-1.13-1.19a8.13 8.13 0 0 0 .832-1.945l1.59-.236a.474.474 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13zm-9.561 4.029a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg></div><div class="tech-name">PostgreSQL</div></div>
+<html lang="es" data-theme="red">
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Docker"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.954-5.43h2.119a.186.186 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m0 2.716h2.119a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.931 0h2.12a.185.185 0 00.185-.186V6.29a.185.185 0 00-.185-.185h-2.12a.185.185 0 00-.185.185v1.887c0 .102.083.185.186.186m2.931 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931 0h2.12a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m5.884 2.715h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.185-.185v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.954 5.43h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m2.931-2.715h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.93 0h2.12a.185.185 0 00.185-.186v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185"/><path d="M21.436 8.461l-2.165-.604a9 9 0 0 0-.31-1.475l1.711-1.385a.2.2 0 0 0 .04-.262l-1.677-2.473a.2.2 0 0 0-.26-.064l-2.05.97a8.96 8.96 0 0 0-1.046-.87l-.341-2.137a.2.2 0 0 0-.222-.165l-3.02.302a.2.2 0 0 0-.187.197l-.04 2.165a8.95 8.95 0 0 0-1.232.498l-1.687-1.428a.2.2 0 0 0-.275.014L6.323 4.32a.2.2 0 0 0 .002.275l1.39 1.687a8.96 8.96 0 0 0-.625 1.115L4.95 7.42a.2.2 0 0 0-.18.215l.176 3.038a.2.2 0 0 0 .197.187l2.166.06c.13.434.293.853.49 1.255l-1.428 1.687a.2.2 0 0 0 .014.275l2.034 2.158a.2.2 0 0 0 .275.013l1.687-1.39c.395.226.812.42 1.246.578l.302 2.166a.2.2 0 0 0 .215.18l3.038-.176a.2.2 0 0 0 .187-.197l.06-2.166a8.95 8.95 0 0 0 1.255-.49l1.687 1.428a.2.2 0 0 0 .275-.014l2.158-2.034a.2.2 0 0 0 .013-.275l-1.39-1.687c.226-.395.42-.812.578-1.246l2.166-.302a.2.2 0 0 0 .18-.215l-.176-3.038a.2.2 0 0 0-.197-.187zM12 17.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg></div><div class="tech-name">Docker</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div><div class="tech-name">GitHub</div></div>
+<head>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="VS Code"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.28-3.56a.95.95 0 0 0-1.36.18L.27 9.05a.95.95 0 0 0 .18 1.36L4.7 13.7l-3.6 12.39 5.85-3.83 1.4 1.16a.5.5 0 0 0 .7-.08L13.85 16l5.36 4.42a.5.5 0 0 0 .7-.08l1.05-1.4a.5.5 0 0 0-.08-.7L15.43 13.7l8.06-5.49a1.5 1.5 0 0 0 .34-1.99l-3.68-3.624z"/></svg></div><div class="tech-name">VS Code</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Git"><path d="M23.546 10.93L13.067.452a1.553 1.553 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.664 2.66a1.838 1.838 0 1 1-1.103 1.07l-2.482-2.479v6.527a1.838 1.838 0 1 1-1.262-.04V9.712a1.838 1.838 0 0 1-.997-2.234L7.86 4.722 1.044 11.537a1.553 1.553 0 0 0 0 2.188l10.48 10.477a1.553 1.553 0 0 0 2.186 0l9.836-9.836a1.553 1.553 0 0 0 0-2.187z"/></svg></div><div class="tech-name">Git</div></div>
+<meta charset="UTF-8" />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="REST API"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><div class="tech-name">REST API</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Swagger"><path d="M9 2v6m6-6v6m-6 4v6m6-6v6"/><path d="M3 8h18M3 16h18"/><circle cx="12" cy="12" r="2.5"/></svg></div><div class="tech-name">Swagger</div></div>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="SQL"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></div><div class="tech-name">SQL</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="HTML5"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">HTML5</div></div>
+<meta name="description" content="Jhon Alex Cordero Perozo — Desarrollador BackEnd. Portafolio profesional con proyectos backend, APIs REST y soluciones de nivel productivo." />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="CSS3"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">CSS3</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Terminal"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div><div class="tech-name">Linux</div></div>
+<meta name="theme-color" content="#f5f5f7" />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="JavaScript"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/></svg></div><div class="tech-name">JavaScript</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Node.js"><path d="M12 1.5L.831 7.762v8.476L12 22.5l11.169-6.262V7.762L12 1.5zm9.402 13.61l-9.402 5.272-9.402-5.272V8.89L12 3.618l9.402 5.272v6.22zM9.831 9.858l1.078-.621 1.078.621v1.243l-1.078.621-1.078-.621V9.858zm4.312 4.349l-1.078.621-1.078-.621v-1.243l1.078-.621 1.078.621v1.243z"/></svg></div><div class="tech-name">Node.js</div></div>
+<title>Jhon Alex Cordero — Full Stack Developer</title>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="PostgreSQL"><path d="M23.561 11.971l-1.495-.467c.04-.39.06-.785.06-1.185s-.02-.795-.06-1.185l1.495-.467a.474.474 0 0 0 .297-.604l-1.4-4.05a.5.5 0 0 0-.604-.297l-1.555.46a8.13 8.13 0 0 0-1.836-1.06l-.236-1.59a.475.475 0 0 0-.547-.396L13.65 1.7a.474.474 0 0 0-.396.547l.214 1.59a8.13 8.13 0 0 0-1.945.832l-1.19-1.13a.475.475 0 0 0-.66.043L7.225 5.74a.475.475 0 0 0 .043.66l1.13 1.19a8.13 8.13 0 0 0-.832 1.945l-1.59.214a.474.474 0 0 0-.396.547l1.072 3.928a.474.474 0 0 0 .547.396l1.59-.214a8.13 8.13 0 0 0 1.06 1.836l-.46 1.555a.475.475 0 0 0 .297.604l4.05 1.4a.5.5 0 0 0 .604-.297l.467-1.495c.39.04.785.06 1.185.06s.795-.02 1.185-.06l.467 1.495a.474.474 0 0 0 .604.297l4.05-1.4a.475.475 0 0 0 .297-.604l-.46-1.555a8.13 8.13 0 0 0 1.06-1.836l1.59-.236a.475.475 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13a8.13 8.13 0 0 0-1.945-.832L15.83 2.247a.474.474 0 0 0-.547-.396l-3.928 1.072a.474.474 0 0 0-.396.547l.236 1.59a8.13 8.13 0 0 0-1.836 1.06L8.78 4.66a.5.5 0 0 0-.297.604l1.4 4.05a.474.474 0 0 0 .604.297l1.555-.46a8.13 8.13 0 0 0 1.06 1.836l-.236 1.59a.475.475 0 0 0 .396.547l3.928 1.072a.474.474 0 0 0 .547-.396l.214-1.59a8.13 8.13 0 0 0 1.945-.832l1.19 1.13a.475.475 0 0 0 .66-.043l1.448-1.554a.475.475 0 0 0-.043-.66l-1.13-1.19a8.13 8.13 0 0 0 .832-1.945l1.59-.236a.474.474 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13zm-9.561 4.029a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg></div><div class="tech-name">PostgreSQL</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Docker"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.954-5.43h2.119a.186.186 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m0 2.716h2.119a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.931 0h2.12a.185.185 0 00.185-.186V6.29a.185.185 0 00-.185-.185h-2.12a.185.185 0 00-.185.185v1.887c0 .102.083.185.186.186m2.931 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931 0h2.12a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m5.884 2.715h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.185-.185v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.954 5.43h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m2.931-2.715h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.93 0h2.12a.185.185 0 00.185-.186v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185"/><path d="M21.436 8.461l-2.165-.604a9 9 0 0 0-.31-1.475l1.711-1.385a.2.2 0 0 0 .04-.262l-1.677-2.473a.2.2 0 0 0-.26-.064l-2.05.97a8.96 8.96 0 0 0-1.046-.87l-.341-2.137a.2.2 0 0 0-.222-.165l-3.02.302a.2.2 0 0 0-.187.197l-.04 2.165a8.95 8.95 0 0 0-1.232.498l-1.687-1.428a.2.2 0 0 0-.275.014L6.323 4.32a.2.2 0 0 0 .002.275l1.39 1.687a8.96 8.96 0 0 0-.625 1.115L4.95 7.42a.2.2 0 0 0-.18.215l.176 3.038a.2.2 0 0 0 .197.187l2.166.06c.13.434.293.853.49 1.255l-1.428 1.687a.2.2 0 0 0 .014.275l2.034 2.158a.2.2 0 0 0 .275.013l1.687-1.39c.395.226.812.42 1.246.578l.302 2.166a.2.2 0 0 0 .215.18l3.038-.176a.2.2 0 0 0 .187-.197l.06-2.166a8.95 8.95 0 0 0 1.255-.49l1.687 1.428a.2.2 0 0 0 .275-.014l2.158-2.034a.2.2 0 0 0 .013-.275l-1.39-1.687c.226-.395.42-.812.578-1.246l2.166-.302a.2.2 0 0 0 .18-.215l-.176-3.038a.2.2 0 0 0-.197-.187zM12 17.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg></div><div class="tech-name">Docker</div></div>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div><div class="tech-name">GitHub</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="VS Code"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.28-3.56a.95.95 0 0 0-1.36.18L.27 9.05a.95.95 0 0 0 .18 1.36L4.7 13.7l-3.6 12.39 5.85-3.83 1.4 1.16a.5.5 0 0 0 .7-.08L13.85 16l5.36 4.42a.5.5 0 0 0 .7-.08l1.05-1.4a.5.5 0 0 0-.08-.7L15.43 13.7l8.06-5.49a1.5 1.5 0 0 0 .34-1.99l-3.68-3.624z"/></svg></div><div class="tech-name">VS Code</div></div>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Git"><path d="M23.546 10.93L13.067.452a1.553 1.553 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.664 2.66a1.838 1.838 0 1 1-1.103 1.07l-2.482-2.479v6.527a1.838 1.838 0 1 1-1.262-.04V9.712a1.838 1.838 0 0 1-.997-2.234L7.86 4.722 1.044 11.537a1.553 1.553 0 0 0 0 2.188l10.48 10.477a1.553 1.553 0 0 0 2.186 0l9.836-9.836a1.553 1.553 0 0 0 0-2.187z"/></svg></div><div class="tech-name">Git</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="REST API"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><div class="tech-name">REST API</div></div>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..700&display=swap" />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Swagger"><path d="M9 2v6m6-6v6m-6 4v6m6-6v6"/><path d="M3 8h18M3 16h18"/><circle cx="12" cy="12" r="2.5"/></svg></div><div class="tech-name">Swagger</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="SQL"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></div><div class="tech-name">SQL</div></div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..700&display=swap" media="print" onload="this.media='all'" />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="HTML5"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">HTML5</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="CSS3"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">CSS3</div></div>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300..700&display=swap" /></noscript>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Terminal"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div><div class="tech-name">Linux</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="JavaScript"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/></svg></div><div class="tech-name">JavaScript</div></div>
+<link rel="stylesheet" href="styles.css" />
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Node.js"><path d="M12 1.5L.831 7.762v8.476L12 22.5l11.169-6.262V7.762L12 1.5zm9.402 13.61l-9.402 5.272-9.402-5.272V8.89L12 3.618l9.402 5.272v6.22zM9.831 9.858l1.078-.621 1.078.621v1.243l-1.078.621-1.078-.621V9.858zm4.312 4.349l-1.078.621-1.078-.621v-1.243l1.078-.621 1.078.621v1.243z"/></svg></div><div class="tech-name">Node.js</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="PostgreSQL"><path d="M23.561 11.971l-1.495-.467c.04-.39.06-.785.06-1.185s-.02-.795-.06-1.185l1.495-.467a.474.474 0 0 0 .297-.604l-1.4-4.05a.5.5 0 0 0-.604-.297l-1.555.46a8.13 8.13 0 0 0-1.836-1.06l-.236-1.59a.475.475 0 0 0-.547-.396L13.65 1.7a.474.474 0 0 0-.396.547l.214 1.59a8.13 8.13 0 0 0-1.945.832l-1.19-1.13a.475.475 0 0 0-.66.043L7.225 5.74a.475.475 0 0 0 .043.66l1.13 1.19a8.13 8.13 0 0 0-.832 1.945l-1.59.214a.474.474 0 0 0-.396.547l1.072 3.928a.474.474 0 0 0 .547.396l1.59-.214a8.13 8.13 0 0 0 1.06 1.836l-.46 1.555a.475.475 0 0 0 .297.604l4.05 1.4a.5.5 0 0 0 .604-.297l.467-1.495c.39.04.785.06 1.185.06s.795-.02 1.185-.06l.467 1.495a.474.474 0 0 0 .604.297l4.05-1.4a.475.475 0 0 0 .297-.604l-.46-1.555a8.13 8.13 0 0 0 1.06-1.836l1.59-.236a.475.475 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13a8.13 8.13 0 0 0-1.945-.832L15.83 2.247a.474.474 0 0 0-.547-.396l-3.928 1.072a.474.474 0 0 0-.396.547l.236 1.59a8.13 8.13 0 0 0-1.836 1.06L8.78 4.66a.5.5 0 0 0-.297.604l1.4 4.05a.474.474 0 0 0 .604.297l1.555-.46a8.13 8.13 0 0 0 1.06 1.836l-.236 1.59a.475.475 0 0 0 .396.547l3.928 1.072a.474.474 0 0 0 .547-.396l.214-1.59a8.13 8.13 0 0 0 1.945-.832l1.19 1.13a.475.475 0 0 0 .66-.043l1.448-1.554a.475.475 0 0 0-.043-.66l-1.13-1.19a8.13 8.13 0 0 0 .832-1.945l1.59-.236a.474.474 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13zm-9.561 4.029a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg></div><div class="tech-name">PostgreSQL</div></div>
+<script src="assets/three.min.js" defer></script>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Docker"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.954-5.43h2.119a.186.186 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m0 2.716h2.119a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.931 0h2.12a.185.185 0 00.185-.186V6.29a.185.185 0 00-.185-.185h-2.12a.185.185 0 00-.185.185v1.887c0 .102.083.185.186.186m2.931 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931 0h2.12a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m5.884 2.715h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.185-.185v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.954 5.43h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m2.931-2.715h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.93 0h2.12a.185.185 0 00.185-.186v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185"/><path d="M21.436 8.461l-2.165-.604a9 9 0 0 0-.31-1.475l1.711-1.385a.2.2 0 0 0 .04-.262l-1.677-2.473a.2.2 0 0 0-.26-.064l-2.05.97a8.96 8.96 0 0 0-1.046-.87l-.341-2.137a.2.2 0 0 0-.222-.165l-3.02.302a.2.2 0 0 0-.187.197l-.04 2.165a8.95 8.95 0 0 0-1.232.498l-1.687-1.428a.2.2 0 0 0-.275.014L6.323 4.32a.2.2 0 0 0 .002.275l1.39 1.687a8.96 8.96 0 0 0-.625 1.115L4.95 7.42a.2.2 0 0 0-.18.215l.176 3.038a.2.2 0 0 0 .197.187l2.166.06c.13.434.293.853.49 1.255l-1.428 1.687a.2.2 0 0 0 .014.275l2.034 2.158a.2.2 0 0 0 .275.013l1.687-1.39c.395.226.812.42 1.246.578l.302 2.166a.2.2 0 0 0 .215.18l3.038-.176a.2.2 0 0 0 .187-.197l.06-2.166a8.95 8.95 0 0 0 1.255-.49l1.687 1.428a.2.2 0 0 0 .275-.014l2.158-2.034a.2.2 0 0 0 .013-.275l-1.39-1.687c.226-.395.42-.812.578-1.246l2.166-.302a.2.2 0 0 0 .18-.215l-.176-3.038a.2.2 0 0 0-.197-.187zM12 17.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg></div><div class="tech-name">Docker</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div><div class="tech-name">GitHub</div></div>
+</head>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="VS Code"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.28-3.56a.95.95 0 0 0-1.36.18L.27 9.05a.95.95 0 0 0 .18 1.36L4.7 13.7l-3.6 12.39 5.85-3.83 1.4 1.16a.5.5 0 0 0 .7-.08L13.85 16l5.36 4.42a.5.5 0 0 0 .7-.08l1.05-1.4a.5.5 0 0 0-.08-.7L15.43 13.7l8.06-5.49a1.5 1.5 0 0 0 .34-1.99l-3.68-3.624z"/></svg></div><div class="tech-name">VS Code</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Git"><path d="M23.546 10.93L13.067.452a1.553 1.553 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.664 2.66a1.838 1.838 0 1 1-1.103 1.07l-2.482-2.479v6.527a1.838 1.838 0 1 1-1.262-.04V9.712a1.838 1.838 0 0 1-.997-2.234L7.86 4.722 1.044 11.537a1.553 1.553 0 0 0 0 2.188l10.48 10.477a1.553 1.553 0 0 0 2.186 0l9.836-9.836a1.553 1.553 0 0 0 0-2.187z"/></svg></div><div class="tech-name">Git</div></div>
+<body>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="REST API"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><div class="tech-name">REST API</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Swagger"><path d="M9 2v6m6-6v6m-6 4v6m6-6v6"/><path d="M3 8h18M3 16h18"/><circle cx="12" cy="12" r="2.5"/></svg></div><div class="tech-name">Swagger</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="SQL"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></div><div class="tech-name">SQL</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="HTML5"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">HTML5</div></div>
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="CSS3"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">CSS3</div></div>
+<!-- Navbar -->
 
-          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Terminal"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div><div class="tech-name">Linux</div></div>
 
-        </div>
-      </div>
+<nav class="nav" id="nav">
+
+
+  <div class="nav-inner">
+
+
+    <a href="#hero" class="nav-logo" aria-label="Inicio">
+
+
+      <span class="logo-mark">⟨/⟩</span>
+
+
+      <span class="logo-text">Jhon.dev</span>
+
+
+    </a>
+
+
+    <ul class="nav-links">
+
+
+      <li><a href="#proyectos" data-text="Proyectos">Proyectos</a></li>
+
+
+      <li><a href="#skills" data-text="Habilidades">Habilidades</a></li>
+
+
+      <li><a href="#experiencia" data-text="Trayectoria">Trayectoria</a></li>
+
+
+      <li><a href="#certificaciones" data-text="Certificaciones">Certificaciones</a></li>
+
+
+      <li><a href="#contacto" data-text="Contacto">Contacto</a></li>
+
+
+    </ul>
+
+
+    <a href="https://github.com/Jhondev-30" target="_blank" rel="noopener" class="nav-cta">
+
+
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+
+
+      GitHub
+
+
+    </a>
+
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+
+
+      <span class="theme-toggle-icon" aria-hidden="true"></span>
+
+
+      <span class="theme-toggle-label" id="themeLabel">Red</span>
+
+
+    </button>
+
+
+    <button class="nav-burger" id="navBurger" aria-label="Menú">
+
+
+      <span></span><span></span><span></span>
+
+
+    </button>
+
+
+  </div>
+
+
+</nav>
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero" id="hero">
+
+
+  <div class="hero-bg-layer" aria-hidden="true"></div>
+
+
+
+
+
+  <div class="hero-split">
+
+
+    <div class="hero-left">
+
+
+      <div class="hero-badge" data-reveal data-parallax="0.05">
+
+
+        <span class="status-dot"></span>
+
+
+        <span>Disponible para remoto · Tiempo completo</span>
+
+
+      </div>
+
+
+
+
+
+      <h1 class="hero-title" data-reveal>
+
+
+        <span class="line line-1">Diseñador</span>
+
+
+        <span class="line line-2">de sistemas</span>
+
+
+        <span class="line line-3"><em>backend</em> que</span>
+
+
+        <span class="line line-4">mueven negocios.</span>
+
+
+      </h1>
+
+
+
+
+
+      <div class="hero-meta" data-reveal>
+
+
+        <p class="hero-subtitle">
+
+
+          Soy <strong>Jhon Alex Cordero</strong>, desarrollador Full Stack con 3+ años
+
+
+          construyendo APIs REST, sistemas contenerizados y bases de datos relacionales
+
+
+          que resuelven problemas reales de operaciones.
+
+
+        </p>
+
+
+        <div class="hero-ctas">
+
+
+          <a href="#proyectos" class="btn btn-primary">
+
+
+            Ver proyectos
+
+
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+
+
+          </a>
+
+
+          <a href="mailto:jhonalexcorderoperozo@gmail.com" class="btn btn-ghost">
+
+
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6"/></svg>
+
+
+            Contactar
+
+
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="hero-stats" data-reveal>
+
+
+        <div class="stat">
+
+
+          <div class="stat-num"><span data-count="3">0</span><span class="stat-plus">+</span></div>
+
+
+          <div class="stat-label">Años construyendo</div>
+
+
+        </div>
+
+
+        <div class="stat">
+
+
+          <div class="stat-num"><span data-count="7">0</span><span class="stat-plus">+</span></div>
+
+
+          <div class="stat-label">Módulos productivos</div>
+
+
+        </div>
+
+
+        <div class="stat">
+
+
+          <div class="stat-num"><span data-count="5">0</span></div>
+
+
+          <div class="stat-label">Certificaciones</div>
+
+
+        </div>
+
+
+        <div class="stat">
+
+
+          <div class="stat-num"><span data-count="4">0</span><span class="stat-plus">+</span></div>
+
+
+          <div class="stat-label">Repositorios públicos</div>
+
+
+        </div>
+
+
+      </div>
+
+
     </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE / TIMELINE -->
-<section class="section experience" id="experiencia">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="kicker">04 — Trayectoria</span>
-      <h2 class="section-title">El camino<br/>hasta aquí.</h2>
-    </div>
-
-    <div class="timeline" data-reveal>
-      <div class="timeline-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">Actualidad</div>
-        <div class="tl-content">
-          <h3>SmartGym — Plataforma API</h3>
-          <span class="tl-tag">Node.js · PostgreSQL · Docker</span>
-          <p>API multi-módulo con autenticación JWT, RBAC, motor de reservas con detección de conflictos, control de acceso físico por cédula, módulo financiero, inventario con ticketing, POS y seguimiento biométrico. Documentada con Swagger y desplegada con docker-compose.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2024 – Hoy</div>
-        <div class="tl-content">
-          <h3>Presencia Digital para Negocios</h3>
-          <span class="tl-tag">HTML5 · CSS3 · JavaScript</span>
-          <p>Identifiqué la brecha de visibilidad online en negocios locales y entregué sitios web responsivos y orientados a SEO. Análisis de flujos operativos para proponer automatizaciones que abren nuevos canales.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2021 – Actualidad</div>
-        <div class="tl-content">
-          <h3>Formación continua</h3>
-          <span class="tl-tag">IBM · Meta · University of Michigan</span>
-          <p>5 certificaciones internacionales en backend con Node.js, contenedores Docker, bases de datos y PostgreSQL.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">UCLA</div>
-        <div class="tl-content">
-          <h3>Ing. en Informática</h3>
-          <span class="tl-tag">Universidad Centroccidental Lisandro Alvarado</span>
-          <p>Estructuras de datos, algoritmos, bases de datos relacionales, ingeniería de software y sistemas operativos. Conocimientos académicos aplicados directamente en SmartGym.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTS -->
-<section class="section certs" id="certificaciones">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="kicker">05 — Certificaciones</span>
-      <h2 class="section-title">Respaldado<br/>por la industria.</h2>
-    </div>
-
-    <div class="certs-list" data-reveal>
-      <div class="cert-row">
-        <div class="cert-issuer">IBM</div>
-        <h3>JavaScript Backend Developer Professional Certificate</h3>
-        <span class="cert-platform">Coursera</span>
-      </div>
-      <div class="cert-row">
-        <div class="cert-issuer">IBM</div>
-        <h3>Developing Back-End Apps with Node.js and Express</h3>
-        <span class="cert-platform">Coursera</span>
-      </div>
-      <div class="cert-row">
-        <div class="cert-issuer">IBM</div>
-        <h3>Containers w/ Docker, Kubernetes & OpenShift</h3>
-        <span class="cert-platform">Coursera</span>
-      </div>
-      <div class="cert-row">
-        <div class="cert-issuer">Meta</div>
-        <h3>Introduction to Databases</h3>
-        <span class="cert-platform">Coursera</span>
-      </div>
-      <div class="cert-row cert-featured">
-        <div class="cert-issuer">U. Michigan</div>
-        <h3>PostgreSQL for Everybody Specialization</h3>
-        <span class="cert-platform">Coursera</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT / CTA -->
-<section class="section cta-section" id="contacto">
-  <div class="container">
-    <div class="cta-card" data-reveal>
-      <span class="kicker">06 — Contacto</span>
-      <h2 class="cta-title">¿Construimos<br/>algo <em>serio</em>?</h2>
-      <p class="cta-sub">
-        Disponible para trabajo remoto a tiempo completo. Si buscas un desarrollador
-        que entrega sistemas completos, no demos, hablemos.
-      </p>
-      <div class="cta-buttons">
-        <a href="mailto:jhonalexcorderoperozo@gmail.com" class="btn btn-primary btn-lg">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6"/></svg>
-          jhonalexcorderoperozo@gmail.com
-        </a>
-        <a href="https://www.linkedin.com/in/jhon-cordero-027b27236/" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/Jhondev-30" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <span class="logo-mark">⟨/⟩</span>
-        <span>Jhon.dev</span>
-      </div>
-      <div class="footer-copy">© 2026 Jhon Alex Cordero Perozo</div>
-      <div class="footer-links">
-        <a href="mailto:jhonalexcorderoperozo@gmail.com">Email</a>
-        <a href="https://github.com/Jhondev-30" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/jhon-cordero-027b27236/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js" defer></script>
-<script src="hero-3d.js" defer></script>
-</body>
-</html>
-
+
+
+
+
+
+    <div class="hero-right" data-reveal>
+
+
+      <div class="hero-3d-wrapper">
+
+
+        <canvas id="hero-3d">
+
+
+          <p style="padding:20px;color:#86868b;">Tu navegador no soporta WebGL. Probá con Chrome o Edge actualizados.</p>
+
+
+        </canvas>
+
+
+        <div class="hero-3d-fallback" id="hero-3d-fallback" hidden>
+
+
+          <div class="fb-illust">
+
+
+            <div class="fb-monitor">
+
+
+              <div class="fb-screen">
+
+
+                <div class="fb-line"></div>
+
+
+                <div class="fb-line short"></div>
+
+
+                <div class="fb-line"></div>
+
+
+                <div class="fb-line short"></div>
+
+
+              </div>
+
+
+            </div>
+
+
+            <div class="fb-desk"></div>
+
+
+            <div class="fb-figure">
+
+
+              <div class="fb-head"></div>
+
+
+              <div class="fb-body"></div>
+
+
+            </div>
+
+
+          </div>
+
+
+          <p>Render 3D no disponible · Tu navegador bloqueó WebGL</p>
+
+
+        </div>
+
+
+        <div class="hero-3d-hint" aria-hidden="true">
+
+
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 4v5h5"/></svg>
+
+
+          Mueve el cursor para orbitar
+
+
+        </div>
+
+
+    <div class="hero-3d-card" data-parallax="0.08">
+
+
+        <span class="card-eyebrow">build.log</span>
+
+
+          <div class="card-row"><span class="d-ok">✓</span> <span>auth module compiled</span></div>
+
+
+          <div class="card-row"><span class="d-ok">✓</span> <span>6 routes migrated</span></div>
+
+
+          <div class="card-row"><span class="d-run">▸</span> <span>running on :3000</span></div>
+
+
+          <div class="card-row dim"><span>docker-compose up</span></div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- ABOUT / PROFILE -->
+
+
+<section class="section about" id="about">
+
+
+  <div class="container">
+
+
+    <div class="section-head" data-reveal>
+
+
+      <span class="kicker">01 — Perfil</span>
+
+
+      <h2 class="section-title">Backend que resuelve<br/>problemas de negocio reales.</h2>
+
+
+    </div>
+
+
+
+
+
+    <div class="about-grid">
+
+
+      <div class="about-text" data-reveal>
+
+
+        <p class="lead">
+
+
+          Más de <strong>3 años</strong> diseñando sistemas backend escalables, APIs REST
+
+
+          y bases de datos relacionales para negocios que necesitaban <em>transformación digital</em>.
+
+
+        </p>
+
+
+        <p>
+
+
+          Me especializo en <strong>Node.js</strong> y <strong>Go</strong> para ingeniería
+
+
+          de APIs, con foco en arquitectura limpia, seguridad (<strong>JWT/RBAC</strong>) y
+
+
+          despliegues contenerizados con Docker.
+
+
+        </p>
+
+
+        <p>
+
+
+          No construyo demos: entrego <strong>sistemas de nivel productivo</strong> que
+
+
+          automatizan operaciones reales — desde control de acceso físico hasta gestión
+
+
+          de inventarios y puntos de venta.
+
+
+        </p>
+
+
+        <div class="about-tags">
+
+
+          <span class="tag">Backend escalable</span>
+
+
+          <span class="tag">Arquitectura limpia</span>
+
+
+          <span class="tag">Seguridad por diseño</span>
+
+
+          <span class="tag">Contenerización</span>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <aside class="about-info" data-reveal>
+
+
+        <div class="info-row">
+
+
+          <span class="info-label">Base</span>
+
+
+          <span class="info-value">Barquisimeto, Venezuela</span>
+
+
+        </div>
+
+
+        <div class="info-row">
+
+
+          <span class="info-label">Modalidad</span>
+
+
+          <span class="info-value">Remoto global</span>
+
+
+        </div>
+
+
+        <div class="info-row">
+
+
+          <span class="info-label">Formación</span>
+
+
+          <span class="info-value">Ing. Informática · UCLA</span>
+
+
+        </div>
+
+
+        <div class="info-row">
+
+
+          <span class="info-label">Idiomas</span>
+
+
+          <span class="info-value">Español nativo · Inglés B2</span>
+
+
+        </div>
+
+
+        <div class="info-row">
+
+
+          <span class="info-label">Stack principal</span>
+
+
+          <span class="info-value">Node · Go · PostgreSQL · Docker</span>
+
+
+        </div>
+
+
+      </aside>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- PROYECTOS — BENTO GRID -->
+
+
+<section class="section projects" id="proyectos">
+
+
+  <div class="container">
+
+
+    <div class="section-head" data-reveal>
+
+
+      <span class="kicker">02 — Proyectos</span>
+
+
+      <h2 class="section-title">Una selección<br/>del trabajo reciente.</h2>
+
+
+      <p class="section-sub">Cada proyecto resuelve un problema real, no es un tutorial copiado.</p>
+
+
+    </div>
+
+
+
+
+
+    <div class="bento" data-reveal>
+
+
+
+
+
+      <!-- BENTO: SmartGym (large, 2 cols) -->
+
+
+      <article class="bento-card bento-lg">
+
+
+        <div class="bento-header">
+
+
+          <div class="bento-meta">
+
+
+            <span class="bento-tag">★ Proyecto destacado</span>
+
+
+            <h3 class="bento-title">SmartGym</h3>
+
+
+            <p class="bento-sub">Plataforma API para gestión integral de gimnasios</p>
+
+
+          </div>
+
+
+          <a href="https://github.com/Jhondev-30/API-Smartgym" target="_blank" rel="noopener" class="bento-link">
+
+
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+
+
+          </a>
+
+
+        </div>
+
+
+
+
+
+        <div class="bento-visual">
+
+
+          <div class="mockup-window">
+
+
+            <div class="mockup-titlebar">
+
+
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+
+
+              <span class="mockup-url">api.smartgym.local/api-docs</span>
+
+
+            </div>
+
+
+            <div class="mockup-body">
+
+
+              <div class="api-panel">
+
+
+                <div class="api-side">
+
+
+                  <div class="api-side-title">Endpoints</div>
+
+
+                  <div class="api-endpoint"><span class="verb get">GET</span> /api/users</div>
+
+
+                  <div class="api-endpoint"><span class="verb post">POST</span> /api/auth/login</div>
+
+
+                  <div class="api-endpoint active"><span class="verb get">GET</span> /api/clases</div>
+
+
+                  <div class="api-endpoint"><span class="verb post">POST</span> /api/reservas</div>
+
+
+                  <div class="api-endpoint"><span class="verb get">GET</span> /membresias/:cedula</div>
+
+
+                  <div class="api-endpoint"><span class="verb post">POST</span> /api/finances</div>
+
+
+                </div>
+
+
+                <div class="api-main">
+
+
+                  <div class="api-tabs">
+
+
+                    <span class="api-tab active">200 OK</span>
+
+
+                    <span class="api-tab">Schema</span>
+
+
+                  </div>
+
+
+                  <pre class="api-code"><code><span class="c-b">{</span>
+
+
+  <span class="c-k">"id"</span>: <span class="c-s">"cl_4827"</span>,
+
+
+  <span class="c-k">"nombre"</span>: <span class="c-s">"CrossFit"</span>,
+
+
+  <span class="c-k">"entrenador"</span>: <span class="c-s">"Carlos M."</span>,
+
+
+  <span class="c-k">"horario"</span>: <span class="c-s">"Lun-Mie 18:00"</span>,
+
+
+  <span class="c-k">"cupos_disponibles"</span>: <span class="c-n">8</span>,
+
+
+  <span class="c-k">"conflict_check"</span>: <span class="c-b">true</span><span class="c-p">,</span>
+
+
+  <span class="c-k">"membresia"</span>: <span class="c-s">"activa"</span>
+
+
+<span class="c-b">}</span></code></pre>
+
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="bento-body">
+
+
+          <ul class="bento-features">
+
+
+            <li><strong>Identidad multi-rol.</strong> JWT + RBAC con perfiles de Admin, Finanzas, Entrenadores y Clientes.</li>
+
+
+            <li><strong>Motor de reservas.</strong> Detección de conflictos a nivel de base de datos: imposible inscribirse dos veces al mismo horario.</li>
+
+
+            <li><strong>Acceso físico por cédula.</strong> Validación de membresía en tiempo real con respuestas 409 Conflict.</li>
+
+
+            <li><strong>Finanzas y POS.</strong> Planes, suscripciones, inventario con ticketing y punto de venta integrado.</li>
+
+
+            <li><strong>Despliegue.</strong> <code>docker-compose</code> levanta toda la plataforma con un solo comando.</li>
+
+
+          </ul>
+
+
+          <div class="bento-stack">
+
+
+            <span>Node.js</span><span>PostgreSQL</span><span>Docker</span><span>REST</span><span>JWT</span><span>Swagger</span>
+
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+
+
+
+
+      <!-- BENTO: Presencia Digital -->
+
+
+      <article class="bento-card bento-md">
+
+
+        <div class="bento-header">
+
+
+          <div class="bento-meta">
+
+
+            <span class="bento-tag subtle">Web</span>
+
+
+            <h3 class="bento-title">Presencia Digital</h3>
+
+
+            <p class="bento-sub">Sitios web estáticos para negocios locales</p>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="bento-mini-visual mini-browser">
+
+
+          <div class="mini-bar"><span></span><span></span><span></span></div>
+
+
+          <div class="mini-content">
+
+
+            <div class="mini-line w60"></div>
+
+
+            <div class="mini-line w80"></div>
+
+
+            <div class="mini-line w50"></div>
+
+
+            <div class="mini-grid">
+
+
+              <div></div><div></div><div></div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="bento-body">
+
+
+          <p class="bento-text">Identifiqué la brecha de visibilidad online en negocios locales y entregué sitios web responsivos y orientados a SEO con HTML5 semántico y CSS3 moderno.</p>
+
+
+          <div class="bento-stack">
+
+
+            <span>HTML5</span><span>CSS3</span><span>SEO</span>
+
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+
+
+
+
+      <!-- BENTO: Pizzería Luigi's -->
+
+
+      <article class="bento-card bento-sm">
+
+
+        <div class="bento-header">
+
+
+          <div class="bento-meta">
+
+
+            <h3 class="bento-title-sm">Pizzería Luigi's</h3>
+
+
+          </div>
+
+
+          <a href="https://github.com/Jhondev-30/pizzeria-luigis" target="_blank" rel="noopener" class="bento-link-sm">↗</a>
+
+
+        </div>
+
+
+        <div class="bento-mini-visual mini-pizza">
+
+
+          <div class="pizza-base">🍕</div>
+
+
+          <div class="pizza-meta">
+
+
+            <span>Margherita</span>
+
+
+            <span>Pepperoni</span>
+
+
+            <span>Quattro Formaggi</span>
+
+
+            <span>Hawaiana</span>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="bento-body-sm">
+
+
+          <p>Sitio web responsive para un negocio gastronómico local.</p>
+
+
+          <div class="bento-stack">
+
+
+            <span>HTML5</span><span>CSS3</span>
+
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+
+
+
+
+      <!-- BENTO: Maquetación -->
+
+
+      <article class="bento-card bento-sm">
+
+
+        <div class="bento-header">
+
+
+          <div class="bento-meta">
+
+
+            <h3 class="bento-title-sm">Maquetación Web</h3>
+
+
+          </div>
+
+
+          <a href="https://github.com/Jhondev-30/maquetacion-de-sitio-web" target="_blank" rel="noopener" class="bento-link-sm">↗</a>
+
+
+        </div>
+
+
+        <div class="bento-mini-visual mini-grid-art">
+
+
+          <div></div><div></div><div></div>
+
+
+          <div></div><div></div><div></div>
+
+
+        </div>
+
+
+        <div class="bento-body-sm">
+
+
+          <p>Prácticas de maquetación con CSS3 moderno, layouts complejos y diseño responsivo.</p>
+
+
+          <div class="bento-stack">
+
+
+            <span>HTML5</span><span>CSS3</span>
+
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+
+
+
+
+      <!-- BENTO: Batalla Naval -->
+
+
+      <article class="bento-card bento-sm">
+
+
+        <div class="bento-header">
+
+
+          <div class="bento-meta">
+
+
+            <h3 class="bento-title-sm">Batalla Naval</h3>
+
+
+          </div>
+
+
+          <a href="https://github.com/Jhondev-30/Battleship-programming-III" target="_blank" rel="noopener" class="bento-link-sm">↗</a>
+
+
+        </div>
+
+
+        <div class="bento-mini-visual mini-battle">
+
+
+          <div class="ocean">
+
+
+            <span>⛵</span><span>⛵</span><span>⛵</span>
+
+
+            <span>⛵</span><span>⛵</span>
+
+
+            <span class="boom">💥</span>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="bento-body-sm">
+
+
+          <p>Juego en Python para Programación III · UCLA · trabajo en equipo.</p>
+
+
+          <div class="bento-stack">
+
+
+            <span>Python</span>
+
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- SKILLS -->
+
+
+<section class="section skills" id="skills">
+
+
+  <div class="container">
+
+
+    <div class="section-head" data-reveal>
+
+
+      <span class="kicker">03 — Habilidades</span>
+
+
+      <h2 class="section-title">Lo que uso<br/>para construir.</h2>
+
+
+    </div>
+
+
+
+
+
+    <div class="skills-bento" data-reveal>
+
+
+      <div class="sk-card sk-lang">
+
+
+        <div class="sk-head">
+
+
+          <span class="sk-num">01</span>
+
+
+          <h3>Lenguajes</h3>
+
+
+        </div>
+
+
+        <ul class="sk-list">
+
+
+          <li>
+
+
+            <span class="sk-name">JavaScript ES6+</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">SQL</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">HTML5 / CSS3</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">Go (Golang)</span>
+
+
+            <span class="sk-level intermediate">Intermedio</span>
+
+
+          </li>
+
+
+        </ul>
+
+
+      </div>
+
+
+
+
+
+      <div class="sk-card sk-back">
+
+
+        <div class="sk-head">
+
+
+          <span class="sk-num">02</span>
+
+
+          <h3>Backend & APIs</h3>
+
+
+        </div>
+
+
+        <ul class="sk-list">
+
+
+          <li>
+
+
+            <span class="sk-name">Node.js</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">Express</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">Diseño de APIs REST</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">JWT / RBAC</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+        </ul>
+
+
+      </div>
+
+
+
+
+
+      <div class="sk-card sk-data">
+
+
+        <div class="sk-head">
+
+
+          <span class="sk-num">03</span>
+
+
+          <h3>Datos</h3>
+
+
+        </div>
+
+
+        <ul class="sk-list">
+
+
+          <li>
+
+
+            <span class="sk-name">PostgreSQL</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">Modelado relacional</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">Índices y migraciones</span>
+
+
+            <span class="sk-level intermediate">Intermedio</span>
+
+
+          </li>
+
+
+        </ul>
+
+
+      </div>
+
+
+
+
+
+      <div class="sk-card sk-tools">
+
+
+        <div class="sk-head">
+
+
+          <span class="sk-num">04</span>
+
+
+          <h3>Herramientas</h3>
+
+
+        </div>
+
+
+        <ul class="sk-list">
+
+
+          <li>
+
+
+            <span class="sk-name">Docker · Docker Compose</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">Git · GitHub</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+          <li>
+
+
+            <span class="sk-name">Swagger / OpenAPI</span>
+
+
+            <span class="sk-level advanced">Avanzado</span>
+
+
+          </li>
+
+
+        </ul>
+
+
+      </div>
+
+
+
+
+
+      <div class="sk-card sk-learning">
+
+
+        <div class="sk-head">
+
+
+          <span class="sk-num">05</span>
+
+
+          <h3>En aprendizaje</h3>
+
+
+        </div>
+
+
+        <p class="sk-learning-text">Stack moderno que estoy incorporando a mi flujo de trabajo.</p>
+
+
+        <div class="learning-tags">
+
+
+          <span class="learn-tag">Astro</span>
+
+
+          <span class="learn-tag">TypeScript</span>
+
+
+          <span class="learn-tag">NestJS</span>
+
+
+          <span class="learn-tag">Go Fiber</span>
+
+
+          <span class="learn-tag">Gin</span>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- Carrusel infinito de logos -->
+
+    <div class="tech-carousel" data-reveal>
+
+      <div class="tech-track-wrap">
+
+        <div class="tech-track" id="techTrack">
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="JavaScript"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/></svg></div><div class="tech-name">JavaScript</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Node.js"><path d="M12 1.5L.831 7.762v8.476L12 22.5l11.169-6.262V7.762L12 1.5zm9.402 13.61l-9.402 5.272-9.402-5.272V8.89L12 3.618l9.402 5.272v6.22zM9.831 9.858l1.078-.621 1.078.621v1.243l-1.078.621-1.078-.621V9.858zm4.312 4.349l-1.078.621-1.078-.621v-1.243l1.078-.621 1.078.621v1.243z"/></svg></div><div class="tech-name">Node.js</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="PostgreSQL"><path d="M23.561 11.971l-1.495-.467c.04-.39.06-.785.06-1.185s-.02-.795-.06-1.185l1.495-.467a.474.474 0 0 0 .297-.604l-1.4-4.05a.5.5 0 0 0-.604-.297l-1.555.46a8.13 8.13 0 0 0-1.836-1.06l-.236-1.59a.475.475 0 0 0-.547-.396L13.65 1.7a.474.474 0 0 0-.396.547l.214 1.59a8.13 8.13 0 0 0-1.945.832l-1.19-1.13a.475.475 0 0 0-.66.043L7.225 5.74a.475.475 0 0 0 .043.66l1.13 1.19a8.13 8.13 0 0 0-.832 1.945l-1.59.214a.474.474 0 0 0-.396.547l1.072 3.928a.474.474 0 0 0 .547.396l1.59-.214a8.13 8.13 0 0 0 1.06 1.836l-.46 1.555a.475.475 0 0 0 .297.604l4.05 1.4a.5.5 0 0 0 .604-.297l.467-1.495c.39.04.785.06 1.185.06s.795-.02 1.185-.06l.467 1.495a.474.474 0 0 0 .604.297l4.05-1.4a.475.475 0 0 0 .297-.604l-.46-1.555a8.13 8.13 0 0 0 1.06-1.836l1.59-.236a.475.475 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13a8.13 8.13 0 0 0-1.945-.832L15.83 2.247a.474.474 0 0 0-.547-.396l-3.928 1.072a.474.474 0 0 0-.396.547l.236 1.59a8.13 8.13 0 0 0-1.836 1.06L8.78 4.66a.5.5 0 0 0-.297.604l1.4 4.05a.474.474 0 0 0 .604.297l1.555-.46a8.13 8.13 0 0 0 1.06 1.836l-.236 1.59a.475.475 0 0 0 .396.547l3.928 1.072a.474.474 0 0 0 .547-.396l.214-1.59a8.13 8.13 0 0 0 1.945-.832l1.19 1.13a.475.475 0 0 0 .66-.043l1.448-1.554a.475.475 0 0 0-.043-.66l-1.13-1.19a8.13 8.13 0 0 0 .832-1.945l1.59-.236a.474.474 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13zm-9.561 4.029a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg></div><div class="tech-name">PostgreSQL</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Docker"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.954-5.43h2.119a.186.186 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m0 2.716h2.119a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.931 0h2.12a.185.185 0 00.185-.186V6.29a.185.185 0 00-.185-.185h-2.12a.185.185 0 00-.185.185v1.887c0 .102.083.185.186.186m2.931 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931 0h2.12a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m5.884 2.715h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.185-.185v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.954 5.43h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m2.931-2.715h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.93 0h2.12a.185.185 0 00.185-.186v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185"/><path d="M21.436 8.461l-2.165-.604a9 9 0 0 0-.31-1.475l1.711-1.385a.2.2 0 0 0 .04-.262l-1.677-2.473a.2.2 0 0 0-.26-.064l-2.05.97a8.96 8.96 0 0 0-1.046-.87l-.341-2.137a.2.2 0 0 0-.222-.165l-3.02.302a.2.2 0 0 0-.187.197l-.04 2.165a8.95 8.95 0 0 0-1.232.498l-1.687-1.428a.2.2 0 0 0-.275.014L6.323 4.32a.2.2 0 0 0 .002.275l1.39 1.687a8.96 8.96 0 0 0-.625 1.115L4.95 7.42a.2.2 0 0 0-.18.215l.176 3.038a.2.2 0 0 0 .197.187l2.166.06c.13.434.293.853.49 1.255l-1.428 1.687a.2.2 0 0 0 .014.275l2.034 2.158a.2.2 0 0 0 .275.013l1.687-1.39c.395.226.812.42 1.246.578l.302 2.166a.2.2 0 0 0 .215.18l3.038-.176a.2.2 0 0 0 .187-.197l.06-2.166a8.95 8.95 0 0 0 1.255-.49l1.687 1.428a.2.2 0 0 0 .275-.014l2.158-2.034a.2.2 0 0 0 .013-.275l-1.39-1.687c.226-.395.42-.812.578-1.246l2.166-.302a.2.2 0 0 0 .18-.215l-.176-3.038a.2.2 0 0 0-.197-.187zM12 17.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg></div><div class="tech-name">Docker</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div><div class="tech-name">GitHub</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="VS Code"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.28-3.56a.95.95 0 0 0-1.36.18L.27 9.05a.95.95 0 0 0 .18 1.36L4.7 13.7l-3.6 12.39 5.85-3.83 1.4 1.16a.5.5 0 0 0 .7-.08L13.85 16l5.36 4.42a.5.5 0 0 0 .7-.08l1.05-1.4a.5.5 0 0 0-.08-.7L15.43 13.7l8.06-5.49a1.5 1.5 0 0 0 .34-1.99l-3.68-3.624z"/></svg></div><div class="tech-name">VS Code</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Git"><path d="M23.546 10.93L13.067.452a1.553 1.553 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.664 2.66a1.838 1.838 0 1 1-1.103 1.07l-2.482-2.479v6.527a1.838 1.838 0 1 1-1.262-.04V9.712a1.838 1.838 0 0 1-.997-2.234L7.86 4.722 1.044 11.537a1.553 1.553 0 0 0 0 2.188l10.48 10.477a1.553 1.553 0 0 0 2.186 0l9.836-9.836a1.553 1.553 0 0 0 0-2.187z"/></svg></div><div class="tech-name">Git</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="REST API"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><div class="tech-name">REST API</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Swagger"><path d="M9 2v6m6-6v6m-6 4v6m6-6v6"/><path d="M3 8h18M3 16h18"/><circle cx="12" cy="12" r="2.5"/></svg></div><div class="tech-name">Swagger</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="SQL"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></div><div class="tech-name">SQL</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="HTML5"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">HTML5</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="CSS3"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">CSS3</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Terminal"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div><div class="tech-name">Linux</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="JavaScript"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/></svg></div><div class="tech-name">JavaScript</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Node.js"><path d="M12 1.5L.831 7.762v8.476L12 22.5l11.169-6.262V7.762L12 1.5zm9.402 13.61l-9.402 5.272-9.402-5.272V8.89L12 3.618l9.402 5.272v6.22zM9.831 9.858l1.078-.621 1.078.621v1.243l-1.078.621-1.078-.621V9.858zm4.312 4.349l-1.078.621-1.078-.621v-1.243l1.078-.621 1.078.621v1.243z"/></svg></div><div class="tech-name">Node.js</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="PostgreSQL"><path d="M23.561 11.971l-1.495-.467c.04-.39.06-.785.06-1.185s-.02-.795-.06-1.185l1.495-.467a.474.474 0 0 0 .297-.604l-1.4-4.05a.5.5 0 0 0-.604-.297l-1.555.46a8.13 8.13 0 0 0-1.836-1.06l-.236-1.59a.475.475 0 0 0-.547-.396L13.65 1.7a.474.474 0 0 0-.396.547l.214 1.59a8.13 8.13 0 0 0-1.945.832l-1.19-1.13a.475.475 0 0 0-.66.043L7.225 5.74a.475.475 0 0 0 .043.66l1.13 1.19a8.13 8.13 0 0 0-.832 1.945l-1.59.214a.474.474 0 0 0-.396.547l1.072 3.928a.474.474 0 0 0 .547.396l1.59-.214a8.13 8.13 0 0 0 1.06 1.836l-.46 1.555a.475.475 0 0 0 .297.604l4.05 1.4a.5.5 0 0 0 .604-.297l.467-1.495c.39.04.785.06 1.185.06s.795-.02 1.185-.06l.467 1.495a.474.474 0 0 0 .604.297l4.05-1.4a.475.475 0 0 0 .297-.604l-.46-1.555a8.13 8.13 0 0 0 1.06-1.836l1.59-.236a.475.475 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13a8.13 8.13 0 0 0-1.945-.832L15.83 2.247a.474.474 0 0 0-.547-.396l-3.928 1.072a.474.474 0 0 0-.396.547l.236 1.59a8.13 8.13 0 0 0-1.836 1.06L8.78 4.66a.5.5 0 0 0-.297.604l1.4 4.05a.474.474 0 0 0 .604.297l1.555-.46a8.13 8.13 0 0 0 1.06 1.836l-.236 1.59a.475.475 0 0 0 .396.547l3.928 1.072a.474.474 0 0 0 .547-.396l.214-1.59a8.13 8.13 0 0 0 1.945-.832l1.19 1.13a.475.475 0 0 0 .66-.043l1.448-1.554a.475.475 0 0 0-.043-.66l-1.13-1.19a8.13 8.13 0 0 0 .832-1.945l1.59-.236a.474.474 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13zm-9.561 4.029a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg></div><div class="tech-name">PostgreSQL</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Docker"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.954-5.43h2.119a.186.186 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m0 2.716h2.119a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.931 0h2.12a.185.185 0 00.185-.186V6.29a.185.185 0 00-.185-.185h-2.12a.185.185 0 00-.185.185v1.887c0 .102.083.185.186.186m2.931 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931 0h2.12a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m5.884 2.715h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.185-.185v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.954 5.43h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m2.931-2.715h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.93 0h2.12a.185.185 0 00.185-.186v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185"/><path d="M21.436 8.461l-2.165-.604a9 9 0 0 0-.31-1.475l1.711-1.385a.2.2 0 0 0 .04-.262l-1.677-2.473a.2.2 0 0 0-.26-.064l-2.05.97a8.96 8.96 0 0 0-1.046-.87l-.341-2.137a.2.2 0 0 0-.222-.165l-3.02.302a.2.2 0 0 0-.187.197l-.04 2.165a8.95 8.95 0 0 0-1.232.498l-1.687-1.428a.2.2 0 0 0-.275.014L6.323 4.32a.2.2 0 0 0 .002.275l1.39 1.687a8.96 8.96 0 0 0-.625 1.115L4.95 7.42a.2.2 0 0 0-.18.215l.176 3.038a.2.2 0 0 0 .197.187l2.166.06c.13.434.293.853.49 1.255l-1.428 1.687a.2.2 0 0 0 .014.275l2.034 2.158a.2.2 0 0 0 .275.013l1.687-1.39c.395.226.812.42 1.246.578l.302 2.166a.2.2 0 0 0 .215.18l3.038-.176a.2.2 0 0 0 .187-.197l.06-2.166a8.95 8.95 0 0 0 1.255-.49l1.687 1.428a.2.2 0 0 0 .275-.014l2.158-2.034a.2.2 0 0 0 .013-.275l-1.39-1.687c.226-.395.42-.812.578-1.246l2.166-.302a.2.2 0 0 0 .18-.215l-.176-3.038a.2.2 0 0 0-.197-.187zM12 17.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg></div><div class="tech-name">Docker</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div><div class="tech-name">GitHub</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="VS Code"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.28-3.56a.95.95 0 0 0-1.36.18L.27 9.05a.95.95 0 0 0 .18 1.36L4.7 13.7l-3.6 12.39 5.85-3.83 1.4 1.16a.5.5 0 0 0 .7-.08L13.85 16l5.36 4.42a.5.5 0 0 0 .7-.08l1.05-1.4a.5.5 0 0 0-.08-.7L15.43 13.7l8.06-5.49a1.5 1.5 0 0 0 .34-1.99l-3.68-3.624z"/></svg></div><div class="tech-name">VS Code</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Git"><path d="M23.546 10.93L13.067.452a1.553 1.553 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.664 2.66a1.838 1.838 0 1 1-1.103 1.07l-2.482-2.479v6.527a1.838 1.838 0 1 1-1.262-.04V9.712a1.838 1.838 0 0 1-.997-2.234L7.86 4.722 1.044 11.537a1.553 1.553 0 0 0 0 2.188l10.48 10.477a1.553 1.553 0 0 0 2.186 0l9.836-9.836a1.553 1.553 0 0 0 0-2.187z"/></svg></div><div class="tech-name">Git</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="REST API"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><div class="tech-name">REST API</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Swagger"><path d="M9 2v6m6-6v6m-6 4v6m6-6v6"/><path d="M3 8h18M3 16h18"/><circle cx="12" cy="12" r="2.5"/></svg></div><div class="tech-name">Swagger</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="SQL"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></div><div class="tech-name">SQL</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="HTML5"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">HTML5</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="CSS3"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">CSS3</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Terminal"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div><div class="tech-name">Linux</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="JavaScript"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.405-.6-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"/></svg></div><div class="tech-name">JavaScript</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Node.js"><path d="M12 1.5L.831 7.762v8.476L12 22.5l11.169-6.262V7.762L12 1.5zm9.402 13.61l-9.402 5.272-9.402-5.272V8.89L12 3.618l9.402 5.272v6.22zM9.831 9.858l1.078-.621 1.078.621v1.243l-1.078.621-1.078-.621V9.858zm4.312 4.349l-1.078.621-1.078-.621v-1.243l1.078-.621 1.078.621v1.243z"/></svg></div><div class="tech-name">Node.js</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="PostgreSQL"><path d="M23.561 11.971l-1.495-.467c.04-.39.06-.785.06-1.185s-.02-.795-.06-1.185l1.495-.467a.474.474 0 0 0 .297-.604l-1.4-4.05a.5.5 0 0 0-.604-.297l-1.555.46a8.13 8.13 0 0 0-1.836-1.06l-.236-1.59a.475.475 0 0 0-.547-.396L13.65 1.7a.474.474 0 0 0-.396.547l.214 1.59a8.13 8.13 0 0 0-1.945.832l-1.19-1.13a.475.475 0 0 0-.66.043L7.225 5.74a.475.475 0 0 0 .043.66l1.13 1.19a8.13 8.13 0 0 0-.832 1.945l-1.59.214a.474.474 0 0 0-.396.547l1.072 3.928a.474.474 0 0 0 .547.396l1.59-.214a8.13 8.13 0 0 0 1.06 1.836l-.46 1.555a.475.475 0 0 0 .297.604l4.05 1.4a.5.5 0 0 0 .604-.297l.467-1.495c.39.04.785.06 1.185.06s.795-.02 1.185-.06l.467 1.495a.474.474 0 0 0 .604.297l4.05-1.4a.475.475 0 0 0 .297-.604l-.46-1.555a8.13 8.13 0 0 0 1.06-1.836l1.59-.236a.475.475 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13a8.13 8.13 0 0 0-1.945-.832L15.83 2.247a.474.474 0 0 0-.547-.396l-3.928 1.072a.474.474 0 0 0-.396.547l.236 1.59a8.13 8.13 0 0 0-1.836 1.06L8.78 4.66a.5.5 0 0 0-.297.604l1.4 4.05a.474.474 0 0 0 .604.297l1.555-.46a8.13 8.13 0 0 0 1.06 1.836l-.236 1.59a.475.475 0 0 0 .396.547l3.928 1.072a.474.474 0 0 0 .547-.396l.214-1.59a8.13 8.13 0 0 0 1.945-.832l1.19 1.13a.475.475 0 0 0 .66-.043l1.448-1.554a.475.475 0 0 0-.043-.66l-1.13-1.19a8.13 8.13 0 0 0 .832-1.945l1.59-.236a.474.474 0 0 0 .396-.547l-1.072-3.928a.474.474 0 0 0-.547-.396l-1.59.236a8.13 8.13 0 0 0-.832-1.945l1.13-1.19a.475.475 0 0 0-.043-.66L19.84 3.582a.475.475 0 0 0-.66-.043l-1.19 1.13zm-9.561 4.029a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg></div><div class="tech-name">PostgreSQL</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Docker"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.954-5.43h2.119a.186.186 0 00.186-.186V3.575a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m0 2.716h2.119a.186.186 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.931 0h2.12a.185.185 0 00.185-.186V6.29a.185.185 0 00-.185-.185h-2.12a.185.185 0 00-.185.185v1.887c0 .102.083.185.186.186m2.931 2.715h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931 0h2.12a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m5.884 2.715h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.185-.185v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.954 5.43h2.119a.186.186 0 00.186-.185v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m2.931-2.715h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185m-2.93 0h2.12a.185.185 0 00.185-.186v-1.887a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.954 0h2.119a.186.186 0 00.186-.186v-1.887a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185m-2.931-2.715h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m11.872 0h2.12a.185.185 0 00.185-.186V9.006a.185.185 0 00-.185-.186h-2.12a.185.185 0 00-.185.186v1.887c0 .102.083.185.186.185m-2.931 0h2.119a.185.185 0 00.186-.186V9.006a.185.185 0 00-.186-.186h-2.119a.185.185 0 00-.186.186v1.887c0 .102.083.185.186.185"/><path d="M21.436 8.461l-2.165-.604a9 9 0 0 0-.31-1.475l1.711-1.385a.2.2 0 0 0 .04-.262l-1.677-2.473a.2.2 0 0 0-.26-.064l-2.05.97a8.96 8.96 0 0 0-1.046-.87l-.341-2.137a.2.2 0 0 0-.222-.165l-3.02.302a.2.2 0 0 0-.187.197l-.04 2.165a8.95 8.95 0 0 0-1.232.498l-1.687-1.428a.2.2 0 0 0-.275.014L6.323 4.32a.2.2 0 0 0 .002.275l1.39 1.687a8.96 8.96 0 0 0-.625 1.115L4.95 7.42a.2.2 0 0 0-.18.215l.176 3.038a.2.2 0 0 0 .197.187l2.166.06c.13.434.293.853.49 1.255l-1.428 1.687a.2.2 0 0 0 .014.275l2.034 2.158a.2.2 0 0 0 .275.013l1.687-1.39c.395.226.812.42 1.246.578l.302 2.166a.2.2 0 0 0 .215.18l3.038-.176a.2.2 0 0 0 .187-.197l.06-2.166a8.95 8.95 0 0 0 1.255-.49l1.687 1.428a.2.2 0 0 0 .275-.014l2.158-2.034a.2.2 0 0 0 .013-.275l-1.39-1.687c.226-.395.42-.812.578-1.246l2.166-.302a.2.2 0 0 0 .18-.215l-.176-3.038a.2.2 0 0 0-.197-.187zM12 17.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg></div><div class="tech-name">Docker</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="GitHub"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div><div class="tech-name">GitHub</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="VS Code"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.28-3.56a.95.95 0 0 0-1.36.18L.27 9.05a.95.95 0 0 0 .18 1.36L4.7 13.7l-3.6 12.39 5.85-3.83 1.4 1.16a.5.5 0 0 0 .7-.08L13.85 16l5.36 4.42a.5.5 0 0 0 .7-.08l1.05-1.4a.5.5 0 0 0-.08-.7L15.43 13.7l8.06-5.49a1.5 1.5 0 0 0 .34-1.99l-3.68-3.624z"/></svg></div><div class="tech-name">VS Code</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="Git"><path d="M23.546 10.93L13.067.452a1.553 1.553 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.664 2.66a1.838 1.838 0 1 1-1.103 1.07l-2.482-2.479v6.527a1.838 1.838 0 1 1-1.262-.04V9.712a1.838 1.838 0 0 1-.997-2.234L7.86 4.722 1.044 11.537a1.553 1.553 0 0 0 0 2.188l10.48 10.477a1.553 1.553 0 0 0 2.186 0l9.836-9.836a1.553 1.553 0 0 0 0-2.187z"/></svg></div><div class="tech-name">Git</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="REST API"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><div class="tech-name">REST API</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Swagger"><path d="M9 2v6m6-6v6m-6 4v6m6-6v6"/><path d="M3 8h18M3 16h18"/><circle cx="12" cy="12" r="2.5"/></svg></div><div class="tech-name">Swagger</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="SQL"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></div><div class="tech-name">SQL</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="HTML5"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">HTML5</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="currentColor" aria-label="CSS3"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.071.758-.107 1.314-.757.011-7.756-.001.215 2.585 5.512-.001.066.815-.51 6.07-.061.748-1.755-.502-1.213-.342-.084-1.005-5.363-.001.252 3.04 6.498 1.79 6.564-1.79.689-7.665.105-1.288L18.59 4.413z"/></svg></div><div class="tech-name">CSS3</div></div>
+
+          <div class="tech-item"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Terminal"><path d="M4 17l6-6-6-6M12 19h8"/></svg></div><div class="tech-name">Linux</div></div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- EXPERIENCE / TIMELINE -->
+
+
+<section class="section experience" id="experiencia">
+
+
+  <div class="container">
+
+
+    <div class="section-head" data-reveal>
+
+
+      <span class="kicker">04 — Trayectoria</span>
+
+
+      <h2 class="section-title">El camino<br/>hasta aquí.</h2>
+
+
+    </div>
+
+
+
+
+
+    <div class="timeline" data-reveal>
+
+
+      <div class="timeline-item">
+
+
+        <div class="tl-dot"></div>
+
+
+        <div class="tl-year">Actualidad</div>
+
+
+        <div class="tl-content">
+
+
+          <h3>SmartGym — Plataforma API</h3>
+
+
+          <span class="tl-tag">Node.js · PostgreSQL · Docker</span>
+
+
+          <p>API multi-módulo con autenticación JWT, RBAC, motor de reservas con detección de conflictos, control de acceso físico por cédula, módulo financiero, inventario con ticketing, POS y seguimiento biométrico. Documentada con Swagger y desplegada con docker-compose.</p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="timeline-item">
+
+
+        <div class="tl-dot"></div>
+
+
+        <div class="tl-year">2024 – Hoy</div>
+
+
+        <div class="tl-content">
+
+
+          <h3>Presencia Digital para Negocios</h3>
+
+
+          <span class="tl-tag">HTML5 · CSS3 · JavaScript</span>
+
+
+          <p>Identifiqué la brecha de visibilidad online en negocios locales y entregué sitios web responsivos y orientados a SEO. Análisis de flujos operativos para proponer automatizaciones que abren nuevos canales.</p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="timeline-item">
+
+
+        <div class="tl-dot"></div>
+
+
+        <div class="tl-year">2021 – Actualidad</div>
+
+
+        <div class="tl-content">
+
+
+          <h3>Formación continua</h3>
+
+
+          <span class="tl-tag">IBM · Meta · University of Michigan</span>
+
+
+          <p>5 certificaciones internacionales en backend con Node.js, contenedores Docker, bases de datos y PostgreSQL.</p>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="timeline-item">
+
+
+        <div class="tl-dot"></div>
+
+
+        <div class="tl-year">UCLA</div>
+
+
+        <div class="tl-content">
+
+
+          <h3>Ing. en Informática</h3>
+
+
+          <span class="tl-tag">Universidad Centroccidental Lisandro Alvarado</span>
+
+
+          <p>Estructuras de datos, algoritmos, bases de datos relacionales, ingeniería de software y sistemas operativos. Conocimientos académicos aplicados directamente en SmartGym.</p>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- CERTS -->
+
+
+<section class="section certs" id="certificaciones">
+
+
+  <div class="container">
+
+
+    <div class="section-head" data-reveal>
+
+
+      <span class="kicker">05 — Certificaciones</span>
+
+
+      <h2 class="section-title">Respaldado<br/>por la industria.</h2>
+
+
+    </div>
+
+
+
+
+
+    <div class="certs-list" data-reveal>
+
+
+      <div class="cert-row">
+
+
+        <div class="cert-issuer">IBM</div>
+
+
+        <h3>JavaScript Backend Developer Professional Certificate</h3>
+
+
+        <span class="cert-platform">Coursera</span>
+
+
+      </div>
+
+
+      <div class="cert-row">
+
+
+        <div class="cert-issuer">IBM</div>
+
+
+        <h3>Developing Back-End Apps with Node.js and Express</h3>
+
+
+        <span class="cert-platform">Coursera</span>
+
+
+      </div>
+
+
+      <div class="cert-row">
+
+
+        <div class="cert-issuer">IBM</div>
+
+
+        <h3>Containers w/ Docker, Kubernetes & OpenShift</h3>
+
+
+        <span class="cert-platform">Coursera</span>
+
+
+      </div>
+
+
+      <div class="cert-row">
+
+
+        <div class="cert-issuer">Meta</div>
+
+
+        <h3>Introduction to Databases</h3>
+
+
+        <span class="cert-platform">Coursera</span>
+
+
+      </div>
+
+
+      <div class="cert-row cert-featured">
+
+
+        <div class="cert-issuer">U. Michigan</div>
+
+
+        <h3>PostgreSQL for Everybody Specialization</h3>
+
+
+        <span class="cert-platform">Coursera</span>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- CONTACT / CTA -->
+
+
+<section class="section cta-section" id="contacto">
+
+
+  <div class="container">
+
+
+    <div class="cta-card" data-reveal>
+
+
+      <span class="kicker">06 — Contacto</span>
+
+
+      <h2 class="cta-title">¿Construimos<br/>algo <em>serio</em>?</h2>
+
+
+      <p class="cta-sub">
+
+
+        Disponible para trabajo remoto a tiempo completo. Si buscas un desarrollador
+
+
+        que entrega sistemas completos, no demos, hablemos.
+
+
+      </p>
+
+
+      <div class="cta-buttons">
+
+
+        <a href="mailto:jhonalexcorderoperozo@gmail.com" class="btn btn-primary btn-lg">
+
+
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z M22 6l-10 7L2 6"/></svg>
+
+
+          jhonalexcorderoperozo@gmail.com
+
+
+        </a>
+
+
+        <a href="https://www.linkedin.com/in/jhon-cordero-027b27236/" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+
+
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+
+
+          LinkedIn
+
+
+        </a>
+
+
+        <a href="https://github.com/Jhondev-30" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+
+
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+
+
+          GitHub
+
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer class="footer">
+
+
+  <div class="container">
+
+
+    <div class="footer-inner">
+
+
+      <div class="footer-brand">
+
+
+        <span class="logo-mark">⟨/⟩</span>
+
+
+        <span>Jhon.dev</span>
+
+
+      </div>
+
+
+      <div class="footer-copy">© 2026 Jhon Alex Cordero Perozo</div>
+
+
+      <div class="footer-links">
+
+
+        <a href="mailto:jhonalexcorderoperozo@gmail.com">Email</a>
+
+
+        <a href="https://github.com/Jhondev-30" target="_blank" rel="noopener">GitHub</a>
+
+
+        <a href="https://www.linkedin.com/in/jhon-cordero-027b27236/" target="_blank" rel="noopener">LinkedIn</a>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</footer>
+
+
+
+
+
+<script src="script.js" defer></script>
+
+
+<script src="hero-3d.js" defer></script>
+
+
+</body>
+
+
+</html>
+
+
+
+
 
