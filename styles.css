@@ -463,14 +463,16 @@ img, svg { max-width: 100%; display: block; }
 }
 .hero-title {
   font-family: var(--serif);
-  font-size: clamp(48px, 8.5vw, 112px);
+  font-size: clamp(40px, 6.4vw, 84px);
   font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.98;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
   margin-bottom: 48px;
   color: var(--text);
   font-variation-settings: 'opsz' 144;
   transition: color 0.4s var(--ease);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .hero-title .line { display: block; overflow: hidden; }
 .hero-title em {
