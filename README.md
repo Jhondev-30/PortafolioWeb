@@ -1,87 +1,151 @@
-# Portafolio — Jhon Alex Cordero Perozo
+<div align="center">
 
-Portafolio web profesional con estilo **Apple-inspired dark**, basado 100% en el CV
-adjunto y los repos públicos de GitHub (`Jhondev-30`).
+# Hola, soy Jhon Alex Cordero 👋
 
-## Contenido
+**Backend Developer · Barquisimeto, Venezuela 🇻🇪**
 
-```
-portafolio/
-├── index.html      # Estructura completa del sitio
-├── styles.css      # Estilos (Apple dark, animaciones, glassmorphism)
-├── script.js       # Interactividad (cursor, partículas, reveal, tilt 3D)
-├── assets/         # Carpeta para imágenes (vacía por ahora)
-└── README.md
-```
+Construyo sistemas backend de nivel productivo que automatizan operaciones reales —
+no demos. APIs robustas, control de acceso, inventarios y puntos de venta.
 
-## Cómo abrirlo
+[![Remote](https://img.shields.io/badge/Modalidad-Remoto%20Global-22c55e?style=for-the-badge&logo=google-meet&logoColor=white)](https://github.com/Jhondev-30)
+[![English](https://img.shields.io/badge/English-B2-3b82f6?style=for-the-badge&logo=googletranslate&logoColor=white)](#)
+[![Spanish](https://img.shields.io/badge/Español-Nativo-ef4444?style=for-the-badge&logo=googletranslate&logoColor=white)](#)
 
-**Opción 1 — Doble click (lo más rápido)**
-1. Abre `index.html` con tu navegador (Chrome, Edge, Firefox, Safari).
-
-**Opción 2 — Servidor local (recomendado, evita bloqueos de CORS en algunos navegadores)**
-```bash
-# Desde la carpeta portafolio/ con Python 3
-python -m http.server 8000
-# Luego abre http://localhost:8000
-```
-
-```bash
-# O con Node.js (si tienes npx)
-npx serve .
-```
-
-## Cómo desplegarlo en internet (gratis)
-
-### Vercel (recomendado, 2 minutos)
-1. Sube la carpeta `portafolio/` a un repo nuevo en GitHub.
-2. Entra a [vercel.com](https://vercel.com) → "New Project" → importa el repo.
-3. Listo. Te da una URL tipo `jhon-portafolio.vercel.app`.
-
-### Netlify (drag & drop)
-1. Entra a [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Arrastra la carpeta `portafolio/`.
-3. Listo, te da una URL pública al instante.
-
-### GitHub Pages
-1. Sube los archivos al branch `gh-pages` o a la raíz del repo.
-2. Settings → Pages → Source: `gh-pages` → Save.
-3. URL: `https://<tu-usuario>.github.io/<repo>/`.
-
-## Características del portafolio
-
-- **Loader animado** con barra de progreso y mensajes secuenciales
-- **Cursor personalizado** con efecto magnético en links/botones
-- **Hero con partículas** conectadas (canvas) + glow flotante
-- **Parallax 3D** del hero según movimiento del mouse
-- **Mockup interactivo de Swagger/OpenAPI** para SmartGym
-- **Marquee infinito** con el stack técnico
-- **Reveal on scroll** con IntersectionObserver
-- **Barras de skills animadas** al entrar en viewport
-- **Tilt 3D** en cards de proyectos y certificaciones
-- **Contadores animados** en estadísticas del hero
-- **Glassmorphism** en navbar y badges
-- **100% responsive** (móvil, tablet, desktop)
-
-## Personalización rápida
-
-- **Tu foto**: reemplaza el ícono del avatar en la sección `about` o agrega una
-  imagen en `assets/` y edita `.floating-card` con la primera card.
-- **Colores**: variables CSS en `:root` dentro de `styles.css`
-  (`--accent`, `--accent-2`, etc).
-- **Estadísticas**: cambia los `data-count` en `.stat-num` del HTML.
-- **Más proyectos**: duplica un `.project-card` en `index.html` dentro de
-  `.projects-grid`.
-
-## Stack del portafolio
-
-- HTML5 semántico
-- CSS3 (custom properties, grid, flexbox, backdrop-filter, animations)
-- Vanilla JavaScript (sin dependencias)
-- Canvas API (partículas)
-- IntersectionObserver (reveal animations)
-- Google Fonts (Inter + JetBrains Mono)
+</div>
 
 ---
 
-**Hecho con disciplina, café y mucho código.** ☕
+## 🚀 Sobre mí
+
+```yaml
+👤  Nombre:      Jhon Alex Cordero Perozo
+📍  Base:        Barquisimeto, Venezuela
+🎓  Formación:   Ing. Informática · UCLA
+🌐  Idiomas:     Español nativo · Inglés B2
+💼  Modalidad:   Remoto global
+⚙️  Stack:       Node.js · Go · PostgreSQL · Docker
+🎯  Foco:        Backend escalable · APIs REST · Arquitectura limpia
+```
+
+> *"No construyo demos: entrego sistemas de nivel productivo que automatizan
+> operaciones reales."*
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+### Lenguajes & Runtime
+<p>
+  <img src="https://skillicons.dev/icons?i=js,nodejs,go,bash,html,css" alt="Lenguajes" />
+</p>
+
+### Bases de datos
+<p>
+  <img src="https://skillicons.dev/icons?i=postgres,sqlite,mysql" alt="Bases de datos" />
+</p>
+
+### Herramientas & DevOps
+<p>
+  <img src="https://skillicons.dev/icons?i=docker,git,github,vscode,linux,postman" alt="Herramientas" />
+</p>
+
+### Diseño & Documentación de API
+<p>
+  <img src="https://skillicons.dev/icons?i=swagger,figma" alt="Diseño" />
+</p>
+
+</div>
+
+---
+
+## ⭐ Proyecto destacado
+
+<table>
+<tr>
+<td width="200">
+
+![Status](https://img.shields.io/badge/Status-Producción-22c55e?style=flat-square)
+![API](https://img.shields.io/badge/Tipo-API%20REST-3b82f6?style=flat-square)
+
+</td>
+<td>
+
+### 🏋️ SmartGym — Plataforma de Gestión para Gimnasios
+
+API REST completa para la gestión integral de gimnasios: membresías,
+control de acceso, asistencia, pagos y reportería.
+
+- 🔐 Autenticación JWT con refresh tokens
+- 📊 Endpoints documentados con Swagger/OpenAPI
+- 🐳 Desplegado con Docker + PostgreSQL
+- ⚡ Arquitectura limpia en capas (routes → controllers → services → repos)
+
+</td>
+</tr>
+</table>
+
+🔗 **Repositorio:** [Jhondev-30/API-Smartgym](https://github.com/Jhondev-30/API-Smartgym)
+
+---
+
+## 💼 Lo que entrego
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+### 🏗️ Backend escalable
+APIs REST bien estructuradas, listas para producción, con autenticación,
+validación y manejo de errores consistente.
+
+</td>
+<td align="center" width="33%">
+
+### 🧱 Arquitectura limpia
+Código separado por capas, fácil de mantener y extender.
+Tests donde importan, no donde estorban.
+
+</td>
+<td align="center" width="33%">
+
+### 🔒 Seguridad por diseño
+JWT, roles, rate limiting, validación de inputs,
+secrets fuera del código y dependencias actualizadas.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📌 Otros proyectos & código
+
+| 📦 Repo | 📝 Descripción |
+|---|---|
+| [API-Smartgym](https://github.com/Jhondev-30/API-Smartgym) | 🏋️ API REST para gestión de gimnasios |
+| _(más repos próximamente…)_ | 🚧 Trabajando en ellos |
+
+---
+
+## 📫 Contacto
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-Jhondev--30-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Jhondev-30)
+[![Email](https://img.shields.io/badge/Email-jhoncordero.dev@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jhoncordero.dev@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jhon-alex-cordero)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Contactar-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/584140000000)
+
+</div>
+
+---
+
+<div align="center">
+
+**Hecho con disciplina, café ☕ y mucho código.**
+
+`⭐ Si te sirve algo de lo que ves por aquí, dejame una estrella en los repos.`
+
+</div>
