@@ -484,13 +484,16 @@ img, svg { max-width: 100%; display: block; }
   margin-bottom: 80px;
 }
 @media (max-width: 768px) {
-  .hero-meta { grid-template-columns: 1fr; gap: 32px; }
+  .hero-meta { grid-template-columns: minmax(0, 1fr); gap: 32px; }
 }
 .hero-subtitle {
-  font-size: clamp(17px, 1.5vw, 19px);
+  font-size: clamp(15px, 4vw, 19px);
   color: var(--text-mid);
   max-width: 640px;
   line-height: 1.55;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .hero-subtitle strong { color: var(--text); font-weight: 600; }
 .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
@@ -533,13 +536,14 @@ img, svg { max-width: 100%; display: block; }
   max-width: 100%;
 }
 @media (max-width: 640px) {
-  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .stat {
   display: flex; flex-direction: column;
   padding: 0 24px;
   border-left: 1px solid var(--line);
   transition: transform 0.3s var(--ease);
+  min-width: 0;
 }
 .stat:first-child { padding-left: 0; border-left: none; }
 .stat:hover .stat-num { transform: translateY(-2px); }
@@ -575,6 +579,9 @@ img, svg { max-width: 100%; display: block; }
   margin-top: 8px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* ========================================================================
@@ -651,12 +658,16 @@ img, svg { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 500;
+  flex-shrink: 0;
 }
 .info-value {
   font-size: 14px;
   color: var(--text);
   font-weight: 500;
   text-align: right;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* ========================================================================
@@ -1479,6 +1490,48 @@ img, svg { max-width: 100%; display: block; }
   .cta-card { padding: 64px 24px; }
   .section-head { margin-bottom: 40px; }
   .bento-card { padding: 24px; }
+}
+
+/* ========================================================================
+   MOBILE — HERO & 3D MODEL (≤ 768px)
+   ======================================================================== */
+@media (max-width: 768px) {
+  .hero { padding: 100px 16px 56px; min-height: auto; }
+  .hero-split { gap: 40px; min-height: auto; }
+  .hero-left { max-width: 100%; }
+  .hero-right {
+    max-width: 100%;
+    aspect-ratio: 16 / 11;
+    min-height: 240px;
+  }
+  .hero-3d-wrapper { min-height: 240px; }
+  .hero-3d-card { display: none; }      /* overlay 200px: se come el canvas en mobile */
+  .hero-3d-hint { display: none; }      /* "mueve el cursor" no aplica en touch */
+  .hero-badge { font-size: 11px; padding: 6px 10px; margin-bottom: 24px; gap: 8px; }
+  .hero-meta { gap: 24px; margin-bottom: 48px; }
+  .hero-title { margin-bottom: 32px; }
+  .hero-stats { padding-top: 28px; }
+  .stat-num { font-size: 28px; }
+}
+
+/* ========================================================================
+   MOBILE PEQUEÑO — teléfonos compactos (≤ 380px)
+   ======================================================================== */
+@media (max-width: 380px) {
+  .hero { padding: 88px 14px 48px; }
+  .container { padding: 0 18px; }
+  .section { padding: 64px 0; }
+  .hero-badge { font-size: 10px; padding: 5px 10px; }
+  .hero-3d-wrapper { min-height: 200px; }
+  .hero-right { min-height: 200px; }
+  .stat-num { font-size: 24px; }
+  .stat-label { font-size: 10px; }
+  .section-title { letter-spacing: -0.03em; }
+  .btn { padding: 12px 18px; font-size: 13px; }
+  .btn-lg { padding: 13px 20px; font-size: 14px; }
+  /* About info: stack label/value vertical para textos largos */
+  .info-row { flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 0; }
+  .info-value { text-align: left; }
 }
 
 /* ========================================================================
