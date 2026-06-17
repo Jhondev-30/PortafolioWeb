@@ -387,7 +387,8 @@ img, svg { max-width: 100%; display: block; }
     0 12px 30px -10px color-mix(in srgb, var(--text) 15%, transparent);
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
-#hero-3d { display: block; width: 100% !important; height: 100% !important; }
+#hero-3d { display: block; width: 100% !important; height: 100% !important; cursor: grab; touch-action: none; }
+#hero-3d:active { cursor: grabbing; }
 
 .hero-3d-hint {
   position: absolute;
@@ -421,6 +422,7 @@ img, svg { max-width: 100%; display: block; }
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.06);
   animation: floatCard 4s ease-in-out infinite;
+  pointer-events: none;     /* no roba los mousedown al canvas — la rotación funciona en toda el área */
 }
 @keyframes floatCard {
   0%, 100% { transform: rotate(2deg) translateY(0); }
