@@ -8,22 +8,39 @@
   'use strict';
 
   // ====================================================================
-  // THEME TOGGLE
+  // THEME TOGGLE — light / dark
+  // Respeta prefers-color-scheme si no hay preferencia guardada.
   // ====================================================================
   function initTheme() {
     const root = document.documentElement;
     const toggle = document.getElementById('themeToggle');
     const label = document.getElementById('themeLabel');
-    let theme = localStorage.getItem('jhon-theme') || 'red';
-    root.setAttribute('data-theme', theme);
-    if (label) label.textContent = theme === 'red' ? 'Red' : 'Pro';
+
+    let saved = localStorage.getItem('jhon-theme');
+    if (!saved) {
+      saved = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    }
+
+    function applyTheme(next) {
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('jhon-theme', next);
+      if (label) label.textContent = next === 'dark' ? 'Dark' : 'Red';
+
+      // Actualiza el theme-color del navegador (la barrita en mobile)
+      var meta = document.querySelector('meta[name="theme-color"]:not([media])');
+      if (meta) meta.setAttribute('content', next === 'dark' ? '#0a0e1f' : '#faf3f0');
+
+      // Avisa al resto del sitio (ej. hero-3d.js) para que re-lea variables CSS
+      root.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
+    }
+
+    applyTheme(saved);
 
     if (toggle) {
       toggle.addEventListener('click', function () {
-        theme = theme === 'red' ? 'pro' : 'red';
-        root.setAttribute('data-theme', theme);
-        localStorage.setItem('jhon-theme', theme);
-        if (label) label.textContent = theme === 'red' ? 'Red' : 'Pro';
+        applyTheme(root.getAttribute('data-theme') === 'dark' ? 'red' : 'dark');
       });
     }
   }

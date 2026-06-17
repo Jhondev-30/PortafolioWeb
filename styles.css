@@ -1,7 +1,6 @@
 /* ========================================================================
-   JHON ALEX CORDERO — PORTAFOLIO v4
-   Temas duales + carrusel + cursor robusto
-   Default: RED (estilo Gatzara) · Toggle: PROFESSIONAL (cálido editorial)
+   JHON ALEX CORDERO — PORTAFOLIO v5
+   Default: RED (estilo Gatzara) · Toggle: DARK (azul-noche con indigo)
    ======================================================================== */
 
 :root,
@@ -51,36 +50,38 @@
   --bg-glow-3: rgba(255, 184, 0, 0.08);
 }
 
-[data-theme="pro"] {
-  /* ===== TEMA PROFESSIONAL — cálido editorial ===== */
-  --bg: #f5f3ef;
-  --bg-soft: #ecebe6;
-  --bg-card: #ffffff;
-  --bg-elev: #fafaf7;
-  --bg-dark: #1d1d1f;
+[data-theme="dark"] {
+  /* ===== TEMA DARK — azul-noche con color indigo ===== */
+  --bg: #0a0e1f;            /* azul-noche profundo — NO negro plano */
+  --bg-soft: #0f1424;
+  --bg-card: #141a30;        /* card un escalón arriba del bg */
+  --bg-elev: #1a2040;
+  --bg-dark: #050813;        /* fondo del CTA: aún más profundo */
 
-  --line: rgba(29, 29, 31, 0.08);
-  --line-strong: rgba(29, 29, 31, 0.14);
-  --line-soft: rgba(29, 29, 31, 0.04);
+  --line: rgba(180, 190, 230, 0.08);
+  --line-strong: rgba(180, 190, 230, 0.16);
+  --line-soft: rgba(180, 190, 230, 0.04);
 
-  --text: #1d1d1f;
-  --text-mid: #515154;
-  --text-dim: #86868b;
-  --text-light: #f5f5f7;
+  --text: #e8eaf5;           /* blanco cálido-azulado, no puro */
+  --text-mid: #9aa1bd;
+  --text-dim: #5d6585;
+  --text-light: #f8f9fc;
 
-  --accent: #c7501c;
-  --accent-2: #4a3a2e;
-  --accent-3: #2d5b3f;
-  --accent-soft: #f3e9df;
+  /* Acento indigo brillante — destaca sobre el fondo azul-noche */
+  --accent: #818cf8;         /* indigo-400 */
+  --accent-2: #6366f1;       /* indigo-500 */
+  --accent-3: #22d3ee;       /* cyan-400 */
+  --accent-4: #fbbf24;       /* ámbar cálido */
+  --accent-soft: rgba(129, 140, 248, 0.14);
 
-  --shadow-sm: 0 1px 2px rgba(29,29,31,0.04), 0 2px 8px rgba(29,29,31,0.04);
-  --shadow-md: 0 4px 12px rgba(29,29,31,0.06), 0 12px 32px rgba(29,29,31,0.05);
-  --shadow-lg: 0 12px 40px rgba(29,29,31,0.08), 0 24px 64px rgba(29,29,31,0.06);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.20);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35), 0 12px 32px rgba(99, 102, 241, 0.20);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.45), 0 24px 64px rgba(99, 102, 241, 0.25);
 
-  --grain-opacity: 0.012;
-  --bg-glow-1: rgba(199, 80, 28, 0.10);
-  --bg-glow-2: rgba(74, 58, 46, 0.09);
-  --bg-glow-3: rgba(45, 91, 63, 0.05);
+  --grain-opacity: 0.04;
+  --bg-glow-1: rgba(129, 140, 248, 0.22);
+  --bg-glow-2: rgba(34, 211, 238, 0.14);
+  --bg-glow-3: rgba(251, 191, 36, 0.08);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -213,11 +214,11 @@ img, svg { max-width: 100%; display: block; }
   border-radius: 50%;
   transition: all 0.4s var(--ease);
 }
-[data-theme="pro"] .theme-toggle-icon::before {
+[data-theme="dark"] .theme-toggle-icon::before {
+  /* En dark, el punto central se ve mejor con un "moon" — dos círculos laterales */
   width: 8px; height: 8px;
-  background: var(--bg-soft);
-  box-shadow: 4px -3px 0 0 var(--text-light), -4px 3px 0 0 var(--text-light);
   background: transparent;
+  box-shadow: 4px -3px 0 0 var(--text-light), -4px 3px 0 0 var(--text-light);
 }
 .theme-toggle-label {
   letter-spacing: 0.02em;
@@ -1535,44 +1536,11 @@ img, svg { max-width: 100%; display: block; }
 }
 
 /* ========================================================================
-   DECORACIONES ROJO — color extra en modo RED
+   DECORACIONES POR TEMA — usan var(--accent) y se adaptan a light/dark
    ======================================================================== */
-[data-theme="red"] .hero::before {
-  content: '';
-  position: absolute;
-  top: 15%;
-  right: -100px;
-  width: 320px; height: 320px;
-  background: radial-gradient(circle, rgba(255, 46, 58, 0.25) 0%, transparent 60%);
-  border-radius: 50%;
-  z-index: 0;
-  animation: blobFloat1 12s ease-in-out infinite;
-  pointer-events: none;
-}
-[data-theme="red"] .hero::after {
-  content: '';
-  position: absolute;
-  bottom: 10%;
-  left: -100px;
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(255, 184, 0, 0.15) 0%, transparent 60%);
-  border-radius: 50%;
-  z-index: 0;
-  animation: blobFloat2 15s ease-in-out infinite;
-  pointer-events: none;
-}
-@keyframes blobFloat1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-30px, 30px) scale(1.1); }
-  66% { transform: translate(20px, -20px) scale(0.95); }
-}
-@keyframes blobFloat2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, -30px) scale(1.15); }
-}
 
-/* Kicker dot en modo rojo */
-[data-theme="red"] .kicker::after {
+/* Kicker dot — vive en ambos temas */
+.kicker::after {
   content: '';
   display: inline-block;
   width: 6px; height: 6px;
@@ -1586,13 +1554,13 @@ img, svg { max-width: 100%; display: block; }
   50% { opacity: 0.5; transform: scale(0.8); }
 }
 
-/* Bento cards — borde sutil rojo en hover */
-[data-theme="red"] .bento-card:hover {
+/* Bento cards — borde del accent en hover */
+.bento-card:hover {
   border-color: color-mix(in srgb, var(--accent) 30%, var(--line-strong));
 }
 
-/* Section title em — más énfasis */
-[data-theme="red"] .section-title em {
+/* Section title em — gradiente del accent */
+.section-title em {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1600,31 +1568,31 @@ img, svg { max-width: 100%; display: block; }
   font-weight: 600;
 }
 
-/* Tag en rojo — fondo más visible */
-[data-theme="red"] .tag {
+/* Tag — fondo accent suave */
+.tag {
   background: var(--accent-soft);
   border-color: color-mix(in srgb, var(--accent) 20%, transparent);
   color: var(--text);
 }
-[data-theme="red"] .tag:hover {
+.tag:hover {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
 }
 
-/* Sk-level en rojo */
-[data-theme="red"] .sk-level.advanced {
+/* Skill levels */
+.sk-level.advanced {
   background: color-mix(in srgb, var(--accent-3) 25%, transparent);
   color: var(--accent-3);
   border: 1px solid color-mix(in srgb, var(--accent-3) 30%, transparent);
 }
-[data-theme="red"] .sk-level.intermediate {
+.sk-level.intermediate {
   background: var(--accent);
   color: white;
 }
 
-/* Cert row issuer — más bold */
-[data-theme="red"] .cert-issuer {
+/* Cert row issuer */
+.cert-issuer {
   background: var(--accent);
   color: white;
   padding: 4px 10px;
@@ -1632,73 +1600,131 @@ img, svg { max-width: 100%; display: block; }
   display: inline-block;
 }
 
-/* bento-tag más vibrante */
-[data-theme="red"] .bento-tag {
+/* bento-tag destacado */
+.bento-tag {
   background: var(--accent);
   color: white;
 }
 
-/* Hero badge — borde rojo sutil */
-[data-theme="red"] .hero-badge {
+/* Hero badge */
+.hero-badge {
   border-color: color-mix(in srgb, var(--accent) 30%, transparent);
   background: var(--accent-soft);
 }
 
-/* Stat plus más grande */
-[data-theme="red"] .stat-plus {
+/* Stat plus */
+.stat-plus {
   color: var(--accent);
   text-shadow: 0 0 16px color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
-/* Theme toggle más prominente en rojo */
-[data-theme="red"] .theme-toggle {
+/* Theme toggle — fondo del accent en ambos temas (legible en dark también) */
+.theme-toggle {
   background: var(--accent);
   color: white;
   border-color: var(--accent);
 }
-[data-theme="red"] .theme-toggle:hover {
+.theme-toggle:hover {
   background: var(--accent-2);
   border-color: var(--accent-2);
 }
-[data-theme="red"] .theme-toggle-icon {
+.theme-toggle-icon {
   background: white;
 }
-[data-theme="red"] .theme-toggle-icon::before {
+.theme-toggle-icon::before {
   background: var(--accent);
 }
 
-/* Buttons primary — más impactantes */
-[data-theme="red"] .btn-primary {
+/* Botones primary */
+.btn-primary {
   background: var(--accent);
   color: white;
 }
-[data-theme="red"] .btn-primary:hover {
+.btn-primary:hover {
   background: var(--accent-2);
   box-shadow: 0 12px 24px -8px color-mix(in srgb, var(--accent) 60%, transparent);
 }
 
-/* Tech items hover más vibrante */
-[data-theme="red"] .tech-item:hover {
+/* Tech items hover */
+.tech-item:hover {
   background: var(--accent-soft);
 }
 
-/* CTA card — más rojo */
-[data-theme="red"] .cta-card {
-  background: linear-gradient(135deg, #1a0508 0%, #4d0a14 100%);
+/* CTA card — gradiente azul-noche con acento indigo */
+.cta-card {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--accent-2) 140%);
 }
-[data-theme="red"] .cta-card::before {
-  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(255, 46, 58, 0.4) 0%, transparent 60%);
+.cta-card::before {
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, color-mix(in srgb, var(--accent) 40%, transparent), transparent 60%);
 }
 
-/* Nav logo mark — más prominente */
-[data-theme="red"] .logo-mark {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+/* Nav logo mark */
+.logo-mark {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-3) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Section title — más contraste en rojo */
-[data-theme="red"] .section-title {
-  color: var(--text);
+/* En modo dark, la card del hero 3D y el CTA quedan más vivos con un glow extra */
+[data-theme="dark"] .hero-3d-wrapper {
+  background:
+    radial-gradient(ellipse at center, color-mix(in srgb, var(--accent) 14%, var(--bg-card)) 0%, var(--bg-soft) 70%, var(--bg-soft) 100%);
+  box-shadow:
+    inset 0 0 0 1px var(--line-soft),
+    0 30px 60px -20px color-mix(in srgb, var(--accent) 35%, transparent),
+    0 12px 30px -10px rgba(0, 0, 0, 0.35);
+}
+
+/* ========================================================================
+   FIX MODO DARK — botones con fondo claro/texto claro (invisibles)
+   En light funcionan bien; en dark hay que invertir fondo↔texto.
+   ======================================================================== */
+
+/* Nav CTA (botón GitHub del navbar) */
+[data-theme="dark"] .nav-cta {
+  background: var(--text-light);
+  color: var(--bg-dark);
+}
+[data-theme="dark"] .nav-cta:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+/* Bento link (icono GitHub en card SmartGym) */
+[data-theme="dark"] .bento-link {
+  background: var(--text-light);
+  color: var(--bg-dark);
+}
+[data-theme="dark"] .bento-link:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+/* CTA card — botón de email (era claro-sobre-claro) */
+[data-theme="dark"] .cta-card .btn-primary {
+  background: var(--text-light);
+  color: var(--bg-dark);
+}
+[data-theme="dark"] .cta-card .btn-primary:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+/* El logo-mark en dark: el gradiente con accent queda bien, pero por si acaso */
+[data-theme="dark"] .hero-3d-card {
+  background: color-mix(in srgb, var(--bg-dark) 95%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+/* Tag hover (claro-sobre-claro en dark) */
+[data-theme="dark"] .tag:hover {
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+/* Bento link pequeño hover */
+[data-theme="dark"] .bento-link-sm:hover {
+  background: var(--text-light);
+  color: var(--bg-dark);
 }
