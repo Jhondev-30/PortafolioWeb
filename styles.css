@@ -480,14 +480,12 @@ img, svg { max-width: 100%; display: block; }
   color: var(--accent);
 }
 .hero-meta {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 48px;
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
   margin-bottom: 80px;
-}
-@media (max-width: 768px) {
-  .hero-meta { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  min-width: 0;
 }
 .hero-subtitle {
   font-size: clamp(15px, 4vw, 19px);
