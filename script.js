@@ -53,8 +53,8 @@
 
   // ====================================================================
   // CARRUSEL INFINITO — animación JS (requestAnimationFrame)
-  // Mide el ancho real de un set y hace wrap. Respeta
-  // prefers-reduced-motion: si está activo, queda estático.
+  // Mide el ancho real de un set y hace wrap. Se mueve SIEMPRE
+  // (excluido de prefers-reduced-motion en CSS), como pidió el usuario.
   // ====================================================================
   function initTechCarousel() {
     var track = document.getElementById('techTrack');
@@ -63,15 +63,7 @@
       return;
     }
 
-    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    console.log('[carrusel] init OK — track width:', track.scrollWidth, 'px', prefersReducedMotion ? '(reduced-motion: estático)' : '');
-
-    // Si reduced-motion está activo, no animamos.
-    if (prefersReducedMotion) {
-      // Centrar el primer set
-      track.style.transform = 'translate3d(0, 0, 0)';
-      return;
-    }
+    console.log('[carrusel] init OK — track width:', track.scrollWidth, 'px');
 
     // El HTML tiene 3 sets idénticos para que el wrap sea invisible
     var setsInTrack = 3;
@@ -231,20 +223,6 @@
   Object.keys(sectionsById).forEach(function (id) {
     var sec = document.getElementById(id);
     if (sec) activeObs.observe(sec);
-  });
-
-  // ====================================================================
-  // FAQ — solo un item abierto a la vez (mejor UX)
-  // ====================================================================
-  var faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(function (item) {
-    item.addEventListener('toggle', function () {
-      if (item.open) {
-        faqItems.forEach(function (other) {
-          if (other !== item && other.open) other.open = false;
-        });
-      }
-    });
   });
 
   console.log('%c⟨/⟩ Jhon Alex Cordero', 'font: 700 22px Georgia; color:#ff2e3a; padding:8px;');
