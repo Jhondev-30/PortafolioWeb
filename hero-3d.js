@@ -517,25 +517,44 @@
     applyCamera();
 
     let isDragging = false, lastX = 0, lastY = 0, dragExpire = 0;
-    function onDown(e) { isDragging = true; const p = e.touches ? e.touches[0] : e; lastX = p.clientX; lastY = p.clientY; }
+    function getPoint(e) {
+      if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      if (e.changedTouches && e.changedTouches.length) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+      return { x: e.clientX, y: e.clientY };
+    }
+    function onDown(e) {
+      isDragging = true;
+      const p = getPoint(e);
+      lastX = p.x; lastY = p.y;
+      dragExpire = 2;
+      if (e.cancelable) e.preventDefault();
+    }
     function onMove(e) {
       if (!isDragging) return;
-      const p = e.touches ? e.touches[0] : e;
-      const dx = p.clientX - lastX, dy = p.clientY - lastY;
-      lastX = p.clientX; lastY = p.clientY;
+      const p = getPoint(e);
+      const dx = p.x - lastX, dy = p.y - lastY;
+      lastX = p.x; lastY = p.y;
       orbit.targetAzimuth -= dx * 0.005;
       orbit.targetPolar -= dy * 0.003;
       orbit.targetPolar = Math.max(Math.PI / 2.6, Math.min(Math.PI / 1.9, orbit.targetPolar));
       orbit.targetAzimuth = Math.max(-Math.PI / 5, Math.min(Math.PI / 5, orbit.targetAzimuth));
-      dragExpire = 2;
+      if (e.cancelable) e.preventDefault();
     }
     function onUp() { isDragging = false; }
-    canvas.addEventListener('mousedown', onDown);
-    window.addEventListener('mousemove', onMove, { passive: true });
-    window.addEventListener('mouseup', onUp);
-    canvas.addEventListener('touchstart', onDown, { passive: true });
-    canvas.addEventListener('touchmove', onMove, { passive: true });
-    canvas.addEventListener('touchend', onUp);
+
+    // Pointer Events (cubre mouse + touch + pen en un solo set de handlers)
+    const wrapper = canvas.parentElement;
+    const targets = [canvas, wrapper].filter(Boolean);
+    targets.forEach(function (t) {
+      t.addEventListener('pointerdown', onDown);
+      t.addEventListener('pointermove', onMove);
+      t.addEventListener('pointerup', onUp);
+      t.addEventListener('pointercancel', onUp);
+      t.addEventListener('pointerleave', onUp);
+    });
+    // Fallback: window-level mousemove/up por si el cursor sale del wrapper
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('pointerup', onUp);
 
     // ====================================================================
     // ANIMACIÓN — throttled y eficiente
