@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Jhon Alex Cordero — Backend Developer</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a0508; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    background: #faf3f0;
+    padding: 36px 40px;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #ff2e3a;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+  .header-left h1 {
+    font-size: 24pt;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #1a0508;
+    margin-bottom: 4px;
+  }
+  .header-left .role {
+    font-size: 11pt;
+    color: #d60f1f;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 9pt;
+    color: #6b3030;
+    line-height: 1.6;
+  }
+  .header-right a { color: #1a0508; text-decoration: none; }
+  .header-right .label { color: #a08080; font-size: 8pt; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+
+  /* SIDEBAR (left column) */
+  .sidebar { display: flex; flex-direction: column; gap: 16px; }
+  .block-title {
+    font-size: 9pt;
+    color: #d60f1f;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ff2e3a;
+  }
+  .sidebar p, .sidebar li { font-size: 9.5pt; color: #6b3030; }
+  .sidebar ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .skills-list li {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .skills-list li .name { color: #1a0508; font-weight: 500; }
+  .skills-list li .level {
+    font-size: 7.5pt; color: #a08080; text-transform: uppercase; letter-spacing: 0.06em;
+  }
+
+  /* MAIN (right column) */
+  .main { display: flex; flex-direction: column; gap: 16px; }
+  .summary {
+    font-size: 10pt;
+    color: #1a0508;
+    line-height: 1.55;
+  }
+  .summary strong { color: #d60f1f; }
+
+  .exp-item { margin-bottom: 12px; }
+  .exp-item:last-child { margin-bottom: 0; }
+  .exp-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .exp-title { font-size: 10.5pt; font-weight: 600; color: #1a0508; }
+  .exp-date { font-size: 8.5pt; color: #d60f1f; font-weight: 600; letter-spacing: 0.04em; }
+  .exp-sub { font-size: 9pt; color: #6b3030; font-style: italic; margin-bottom: 4px; }
+  .exp-desc { font-size: 9.5pt; color: #6b3030; line-height: 1.5; }
+  .exp-desc strong { color: #1a0508; }
+
+  .cert-item {
+    display: flex; gap: 8px; align-items: baseline;
+    margin-bottom: 6px;
+    font-size: 9.5pt;
+  }
+  .cert-issuer {
+    background: #ff2e3a; color: #fff; font-weight: 700;
+    font-size: 7.5pt; padding: 2px 6px; border-radius: 3px;
+    letter-spacing: 0.06em; flex-shrink: 0;
+    min-width: 60px; text-align: center;
+  }
+  .cert-name { color: #1a0508; }
+
+  .lang-line {
+    display: flex; justify-content: space-between; font-size: 9.5pt;
+    color: #1a0508; margin-bottom: 3px;
+  }
+  .lang-level { color: #a08080; font-size: 9pt; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <h1>Jhon Alex Cordero</h1>
+    <div class="role">Backend Developer</div>
+  </div>
+  <div class="header-right">
+    <div><span class="label">Email</span><br><a href="mailto:jhonalexcorderoperozo@gmail.com">jhonalexcorderoperozo@gmail.com</a></div>
+    <div style="margin-top:4px"><span class="label">Ubicación</span><br>Barquisimeto, Venezuela · Remoto global</div>
+    <div style="margin-top:4px"><span class="label">GitHub</span><br>github.com/Jhondev-30</div>
+    <div style="margin-top:4px"><span class="label">LinkedIn</span><br>linkedin.com/in/jhon-cordero-027b27236</div>
+  </div>
+</div>
+
+<div class="grid">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <section>
+      <div class="block-title">Perfil</div>
+      <p>Ingeniero en Informática con 3+ años diseñando APIs REST, sistemas backend escalables y bases de datos relacionales. Enfoque en arquitectura limpia, seguridad (JWT/RBAC) y despliegues contenerizados.</p>
+    </section>
+
+    <section>
+      <div class="block-title">Stack Principal</div>
+      <ul class="skills-list">
+        <li><span class="name">Node.js</span><span class="level">Avanzado</span></li>
+        <li><span class="name">Go (Golang)</span><span class="level">Intermedio</span></li>
+        <li><span class="name">PostgreSQL</span><span class="level">Avanzado</span></li>
+        <li><span class="name">Docker</span><span class="level">Avanzado</span></li>
+        <li><span class="name">Express</span><span class="level">Avanzado</span></li>
+        <li><span class="name">REST APIs</span><span class="level">Avanzado</span></li>
+        <li><span class="name">SQL</span><span class="level">Avanzado</span></li>
+        <li><span class="name">JavaScript ES6+</span><span class="level">Avanzado</span></li>
+        <li><span class="name">Git / GitHub</span><span class="level">Avanzado</span></li>
+        <li><span class="name">Swagger</span><span class="level">Avanzado</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="block-title">En aprendizaje</div>
+      <ul style="font-size:9pt; color:#6b3030; line-height:1.7;">
+        <li>· TypeScript</li>
+        <li>· NestJS</li>
+        <li>· Go Fiber / Gin</li>
+        <li>· Astro</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="block-title">Idiomas</div>
+      <div class="lang-line"><span>Español</span><span class="lang-level">Nativo</span></div>
+      <div class="lang-line"><span>Inglés</span><span class="lang-level">B2</span></div>
+    </section>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <section>
+      <div class="block-title">Resumen Profesional</div>
+      <p class="summary">Diseño y entrego <strong>sistemas de nivel productivo</strong>, no demos: APIs multi-módulo con autenticación JWT/RBAC, motores de reservas con detección de conflictos a nivel de base de datos, control de acceso físico por cédula, módulos financieros, POS e inventarios con ticketing — desplegados con <strong>docker-compose</strong> y documentados con Swagger.</p>
+    </section>
+
+    <section>
+      <div class="block-title">Experiencia & Proyectos</div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-title">SmartGym — Plataforma API</span>
+          <span class="exp-date">Actualidad</span>
+        </div>
+        <div class="exp-sub">Node.js · PostgreSQL · Docker · JWT/RBAC · Swagger</div>
+        <p class="exp-desc">API multi-módulo para gestión integral de gimnasios. <strong>Identidad multi-rol</strong> (Admin, Finanzas, Entrenadores, Clientes). <strong>Motor de reservas</strong> con detección de conflictos a nivel de BD. <strong>Acceso físico por cédula</strong> con respuestas 409 Conflict. <strong>Finanzas y POS</strong>: planes, suscripciones, inventario con ticketing. Despliegue con <strong>docker-compose</strong> (un solo comando levanta toda la plataforma).</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-title">Presencia Digital para Negocios</span>
+          <span class="exp-date">2024 – Hoy</span>
+        </div>
+        <div class="exp-sub">HTML5 · CSS3 · JavaScript · SEO</div>
+        <p class="exp-desc">Identifiqué la brecha de visibilidad online en negocios locales y entregué sitios web responsivos y orientados a SEO con HTML5 semántico y CSS3 moderno. Análisis de flujos operativos para proponer automatizaciones.</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-title">Formación continua · 5 certificaciones</span>
+          <span class="exp-date">2021 – Actualidad</span>
+        </div>
+        <div class="exp-sub">IBM · Meta · University of Michigan</div>
+        <p class="exp-desc">Backend con Node.js, contenedores Docker, bases de datos y PostgreSQL — cursado en plataformas internacionales (Coursera).</p>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <span class="exp-title">Ing. en Informática</span>
+          <span class="exp-date">UCLA</span>
+        </div>
+        <div class="exp-sub">Universidad Centroccidental Lisandro Alvarado</div>
+        <p class="exp-desc">Estructuras de datos, algoritmos, bases de datos relacionales, ingeniería de software y sistemas operativos. Conocimientos académicos aplicados directamente en SmartGym.</p>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="block-title">Certificaciones</div>
+      <div class="cert-item"><span class="cert-issuer">IBM</span><span class="cert-name">JavaScript Backend Developer Professional Certificate</span></div>
+      <div class="cert-item"><span class="cert-issuer">IBM</span><span class="cert-name">Developing Back-End Apps with Node.js and Express</span></div>
+      <div class="cert-item"><span class="cert-issuer">IBM</span><span class="cert-name">Containers w/ Docker, Kubernetes &amp; OpenShift</span></div>
+      <div class="cert-item"><span class="cert-issuer">META</span><span class="cert-name">Introduction to Databases</span></div>
+      <div class="cert-item"><span class="cert-issuer">U. MICH</span><span class="cert-name">PostgreSQL for Everybody Specialization</span></div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
