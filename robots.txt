@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jhondev-30.github.io/PortafolioWeb/sitemap.xml

@@ -50,6 +50,8 @@
 
 <body>
 
+<a href="#hero" class="skip-link">Saltar al contenido</a>
+
 
 
 
@@ -57,7 +59,7 @@
 <!-- Navbar -->
 
 
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label="Navegación principal">
 
 
   <div class="nav-inner">
@@ -84,10 +86,13 @@
       <li><a href="#skills" data-text="Habilidades">Habilidades</a></li>
 
 
+      <li><a href="#proceso" data-text="Proceso">Proceso</a></li>
+
+
       <li><a href="#experiencia" data-text="Trayectoria">Trayectoria</a></li>
 
 
-      <li><a href="#certificaciones" data-text="Certificaciones">Certificaciones</a></li>
+      <li><a href="#faq" data-text="FAQ">FAQ</a></li>
 
 
       <li><a href="#contacto" data-text="Contacto">Contacto</a></li>
@@ -436,6 +441,8 @@
 
 <!-- ABOUT / PROFILE -->
 
+
+<main id="main-content">
 
 <section class="section about" id="about">
 
@@ -1588,6 +1595,126 @@
 <!-- EXPERIENCE / TIMELINE -->
 
 
+<section class="section process" id="proceso" aria-labelledby="proceso-title">
+
+
+  <div class="container">
+
+
+    <div class="section-head" data-reveal>
+
+
+      <span class="kicker">05 — Cómo trabajo</span>
+
+
+      <h2 class="section-title" id="proceso-title">De la idea<br/>al despliegue.</h2>
+
+
+      <p class="section-sub">Un proceso simple y transparente. Sin sorpresas, sin demos que se quedan en el repo.</p>
+
+
+    </div>
+
+
+
+
+
+    <div class="process-grid" data-reveal>
+
+
+      <div class="step">
+
+
+        <div class="step-num">01</div>
+
+
+        <h3 class="step-title">Diagnóstico</h3>
+
+
+        <p class="step-desc">Entiendo el problema operativo. Te hago preguntas incómodas para descubrir qué falla realmente, qué se mide y qué se decide con esos datos.</p>
+
+
+        <span class="step-tag">~2-3 días</span>
+
+
+      </div>
+
+
+
+
+
+      <div class="step">
+
+
+        <div class="step-num">02</div>
+
+
+        <h3 class="step-title">Diseño técnico</h3>
+
+
+        <p class="step-desc">Stack, arquitectura, modelo de datos, contratos de API. Documentado y revisado contigo antes de escribir una línea de código.</p>
+
+
+        <span class="step-tag">~3-5 días</span>
+
+
+      </div>
+
+
+
+
+
+      <div class="step">
+
+
+        <div class="step-num">03</div>
+
+
+        <h3 class="step-title">Construcción</h3>
+
+
+        <p class="step-desc">Iteraciones cortas con demos semanales. Repo privado desde el día 1, código deployable en cada commit,Swagger vivo mientras se construye.</p>
+
+
+        <span class="step-tag">2-6 semanas</span>
+
+
+      </div>
+
+
+
+
+
+      <div class="step">
+
+
+        <div class="step-num">04</div>
+
+
+        <h3 class="step-title">Despliegue + handoff</h3>
+
+
+        <p class="step-desc">docker-compose arriba, monitoreo configurado, runbook de operaciones. Documentación para que tu equipo tome el relevo sin mí.</p>
+
+
+        <span class="step-tag">~3-5 días</span>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
 <section class="section experience" id="experiencia">
 
 
@@ -1858,6 +1985,189 @@
 <!-- CONTACT / CTA -->
 
 
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+
+
+  <div class="container">
+
+
+    <div class="section-head" data-reveal>
+
+
+      <span class="kicker">07 — Preguntas frecuentes</span>
+
+
+      <h2 class="section-title" id="faq-title">Lo que más<br/>me preguntan.</h2>
+
+
+    </div>
+
+
+
+
+
+    <div class="faq-list" data-reveal>
+
+
+      <details class="faq-item">
+
+
+        <summary>
+
+
+          <span>¿Cuánto cuesta un proyecto típico?</span>
+
+
+          <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+
+
+        </summary>
+
+
+        <div class="faq-answer">
+
+
+          <p>Depende del alcance, pero como referencia: una API REST completa con auth, CRUD y desplieguede 2 a 6 semanas. Trabajo por hito con precio cerrado — sabés cuánto vas a pagar antes de empezar. Sin sorpresas.</p>
+
+
+        </div>
+
+
+      </details>
+
+
+
+
+
+      <details class="faq-item">
+
+
+        <summary>
+
+
+          <span>¿Trabajas con clientes que no son técnicos?</span>
+
+
+          <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+
+
+        </summary>
+
+
+        <div class="faq-answer">
+
+
+          <p>Sí, de hecho es donde más valor entrego. Mi trabajo es traducir problemas de operación en sistemas que los resuelven. Te explico todo en lenguaje de negocio, no en jerga.</p>
+
+
+        </div>
+
+
+      </details>
+
+
+
+
+
+      <details class="faq-item">
+
+
+        <summary>
+
+
+          <span>¿En qué zona horaria trabajas?</span>
+
+
+          <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+
+
+        </summary>
+
+
+        <div class="faq-answer">
+
+
+          <p>UTC-4 (Venezuela). Trabajo remoto global y me adapto a solapamientos de 4-6 horas con cualquier zona. Reuniones síncronas solo cuando son necesarias — el resto va por escrito.</p>
+
+
+        </div>
+
+
+      </details>
+
+
+
+
+
+      <details class="faq-item">
+
+
+        <summary>
+
+
+          <span>¿Puedes firmar NDA o acuerdo de confidencialidad?</span>
+
+
+          <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" currentColor fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+
+
+        </summary>
+
+
+        <div class="faq-answer">
+
+
+          <p>Sí, sin problema. NDA estándar, NDA personalizado, o contrato de servicios — lo que necesites. Trabajo previo incluye proyectos para fintech y salud con estrictos requisitos deconfidencialidad.</p>
+
+
+        </div>
+
+
+      </details>
+
+
+
+
+
+      <details class="faq-item">
+
+
+        <summary>
+
+
+          <span>¿Qué pasa después de entregar?</span>
+
+
+          <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+
+
+        </summary>
+
+
+        <div class="faq-answer">
+
+
+          <p>Entrego código documentado, infraestructura reproducible con docker-compose, y un runbook para tu equipo. Ofrezco soporte post-entrega (30 días incluidos) y puedo continuar como maintainer si lo necesitás.</p>
+
+
+        </div>
+
+
+      </details>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+
+
 <section class="section cta-section" id="contacto">
 
 
@@ -1941,6 +2251,8 @@
 
 <!-- FOOTER -->
 
+
+</main>
 
 <footer class="footer">
 

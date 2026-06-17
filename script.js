@@ -53,8 +53,8 @@
 
   // ====================================================================
   // CARRUSEL INFINITO — animación JS (requestAnimationFrame)
-  // Mide el ancho real de un set y hace wrap. No respeta
-  // prefers-reduced-motion porque el usuario pidió que se mueva siempre.
+  // Mide el ancho real de un set y hace wrap. Respeta
+  // prefers-reduced-motion: si está activo, queda estático.
   // ====================================================================
   function initTechCarousel() {
     var track = document.getElementById('techTrack');
@@ -63,7 +63,15 @@
       return;
     }
 
-    console.log('[carrusel] init OK — track width:', track.scrollWidth, 'px');
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    console.log('[carrusel] init OK — track width:', track.scrollWidth, 'px', prefersReducedMotion ? '(reduced-motion: estático)' : '');
+
+    // Si reduced-motion está activo, no animamos.
+    if (prefersReducedMotion) {
+      // Centrar el primer set
+      track.style.transform = 'translate3d(0, 0, 0)';
+      return;
+    }
 
     // El HTML tiene 3 sets idénticos para que el wrap sea invisible
     var setsInTrack = 3;
@@ -200,6 +208,44 @@
     });
   }, { threshold: 0.4 });
   document.querySelectorAll('.section-head').forEach(function (el) { headObs.observe(el); });
+
+  // ====================================================================
+  // ACTIVE NAV LINK — resalta el link correspondiente a la sección visible
+  // ====================================================================
+  var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  var sectionsById = {};
+  navAnchors.forEach(function (a) {
+    var id = a.getAttribute('href').slice(1);
+    var section = document.getElementById(id);
+    if (section) sectionsById[id] = a;
+  });
+  var activeObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var anchor = sectionsById[entry.target.id];
+      if (anchor) {
+        if (entry.isIntersecting) anchor.setAttribute('aria-current', 'true');
+        else anchor.removeAttribute('aria-current');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+  Object.keys(sectionsById).forEach(function (id) {
+    var sec = document.getElementById(id);
+    if (sec) activeObs.observe(sec);
+  });
+
+  // ====================================================================
+  // FAQ — solo un item abierto a la vez (mejor UX)
+  // ====================================================================
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      if (item.open) {
+        faqItems.forEach(function (other) {
+          if (other !== item && other.open) other.open = false;
+        });
+      }
+    });
+  });
 
   console.log('%c⟨/⟩ Jhon Alex Cordero', 'font: 700 22px Georgia; color:#ff2e3a; padding:8px;');
 })();
