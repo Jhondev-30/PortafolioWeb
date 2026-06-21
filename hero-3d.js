@@ -412,31 +412,50 @@
     hpArc.rotation.z = Math.PI;
     personGroup.add(hpArc);
 
-    const leftUpperArm = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.4, 0.12), M.shirt);
-    leftUpperArm.position.set(-0.3, 1.4, 0.8);
-    leftUpperArm.rotation.z = 0.4;
-    leftUpperArm.rotation.x = -0.6;
-    personGroup.add(leftUpperArm);
-    const leftForearm = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.4, 0.1), M.skin);
-    leftForearm.position.set(-0.45, 1.18, 0.55);
-    leftForearm.rotation.x = -0.2;
-    personGroup.add(leftForearm);
-    const leftHand = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.05, 0.12), M.skin);
-    leftHand.position.set(-0.45, 1.05, 0.4);
-    personGroup.add(leftHand);
+    // Brazo izquierdo: jerarquía padre-hijo
+    // - upperArm pivota en el hombro (origen en proximal tras geometry.translate)
+    // - forearm es hijo de upperArm, pivota en el codo
+    // - hand es hija de forearm, pivota en la muñeca
+    // Esto hace que la mano SIEMPRE siga al antebrazo — imposible que se despegue.
 
+    const leftUpperArm = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.4, 0.12), M.shirt);
+    leftUpperArm.geometry.translate(0, -0.2, 0); // pivote en hombro (proximal)
+    leftUpperArm.position.set(-0.3, 1.55, 0.75);
+    leftUpperArm.rotation.z = 0.45;
+    leftUpperArm.rotation.x = -0.55;
+    personGroup.add(leftUpperArm);
+
+    const leftForearm = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.4, 0.1), M.skin);
+    leftForearm.geometry.translate(0, -0.2, 0); // pivote en codo
+    leftForearm.position.set(0, -0.4, 0); // hijo del upperArm: al final del upperArm (local)
+    leftForearm.rotation.x = -0.5; // dobla el codo hacia adelante (relativo al upperArm)
+    leftUpperArm.add(leftForearm);
+
+    const leftHand = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.05, 0.12), M.skin);
+    leftHand.geometry.translate(0, -0.025, 0); // pivote en muñeca
+    leftHand.position.set(0, -0.4, 0); // al final del forearm (local)
+    leftForearm.add(leftHand);
+
+    // Brazo derecho (espejo del izquierdo)
     const rightUpperArm = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.4, 0.12), M.shirt);
-    rightUpperArm.position.set(0.3, 1.4, 0.8);
-    rightUpperArm.rotation.z = -0.4;
-    rightUpperArm.rotation.x = -0.6;
+    rightUpperArm.geometry.translate(0, -0.2, 0);
+    rightUpperArm.position.set(0.3, 1.55, 0.75);
+    rightUpperArm.rotation.z = -0.45;
+    rightUpperArm.rotation.x = -0.55;
     personGroup.add(rightUpperArm);
+
     const rightForearm = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.4, 0.1), M.skin);
-    rightForearm.position.set(0.45, 1.18, 0.55);
-    rightForearm.rotation.x = -0.2;
-    personGroup.add(rightForearm);
+    rightForearm.geometry.translate(0, -0.2, 0);
+    rightForearm.position.set(0, -0.4, 0);
+    rightForearm.rotation.x = -0.5;
+    rightUpperArm.add(rightForearm);
+
+    // Mano derecha: posicionada sobre el ratón
+    // (Como hija del forearm, hereda toda la cadena de transformaciones)
     const rightHand = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.05, 0.12), M.skin);
-    rightHand.position.set(0.45, 1.05, 0.4);
-    personGroup.add(rightHand);
+    rightHand.geometry.translate(0, -0.025, 0);
+    rightHand.position.set(0, -0.4, 0);
+    rightForearm.add(rightHand);
 
     const leftLeg = new THREE.Mesh(new THREE.BoxGeometry(0.18, 0.55, 0.2), M.pants);
     leftLeg.position.set(-0.15, 0.6, 1.4);
@@ -517,6 +536,7 @@
     applyCamera();
 
     let isDragging = false, lastX = 0, lastY = 0, dragExpire = 0;
+    let activePointerId = null;
     function getPoint(e) {
       if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
       if (e.changedTouches && e.changedTouches.length) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
@@ -524,9 +544,18 @@
     }
     function onDown(e) {
       isDragging = true;
+      activePointerId = (e.pointerId != null) ? e.pointerId : null;
       const p = getPoint(e);
       lastX = p.x; lastY = p.y;
       dragExpire = 2;
+      // Captura el puntero: todos los eventos siguientes van al target hasta soltar,
+      // incluso si el cursor sale del wrapper. Sin esto, drag se cortaba al cruzar
+      // el borde del .hero-3d-wrapper.
+      try {
+        if (activePointerId != null && e.target && e.target.setPointerCapture) {
+          e.target.setPointerCapture(activePointerId);
+        }
+      } catch (_) { /* API no soportada, fallback a window listeners */ }
       if (e.cancelable) e.preventDefault();
     }
     function onMove(e) {
@@ -540,7 +569,12 @@
       orbit.targetAzimuth = Math.max(-Math.PI / 5, Math.min(Math.PI / 5, orbit.targetAzimuth));
       if (e.cancelable) e.preventDefault();
     }
-    function onUp() { isDragging = false; }
+    function onUp(e) {
+      // Solo soltar si el evento corresponde al puntero activo
+      if (e && activePointerId != null && e.pointerId != null && e.pointerId !== activePointerId) return;
+      isDragging = false;
+      activePointerId = null;
+    }
 
     // Pointer Events (cubre mouse + touch + pen en un solo set de handlers)
     const wrapper = canvas.parentElement;
@@ -550,11 +584,11 @@
       t.addEventListener('pointermove', onMove);
       t.addEventListener('pointerup', onUp);
       t.addEventListener('pointercancel', onUp);
-      t.addEventListener('pointerleave', onUp);
     });
-    // Fallback: window-level mousemove/up por si el cursor sale del wrapper
+    // Fallback: window-level move/up para drag iniciado en el canvas que sale del wrapper.
     window.addEventListener('pointermove', onMove);
     window.addEventListener('pointerup', onUp);
+    window.addEventListener('pointercancel', onUp);
 
     // ====================================================================
     // ANIMACIÓN — throttled y eficiente
@@ -590,13 +624,40 @@
         shoulders.position.y = 1.55 + breath;
 
         if (!isMobile) {
-          const t1 = totalTime * 4, t2 = totalTime * 5.3;
-          rightHand.position.x = 0.45 + Math.sin(t1) * 0.02;
-          rightHand.position.y = 1.05 + Math.abs(Math.sin(t1 * 0.7)) * 0.008;
-          rightForearm.rotation.x = -0.2 + Math.sin(t2) * 0.04;
-          leftHand.position.x = -0.45 + Math.sin(t2 * 0.8 + 1) * 0.02;
-          leftHand.position.y = 1.05 + Math.abs(Math.sin(t1 * 0.5 + 1)) * 0.008;
-          leftForearm.rotation.x = -0.2 + Math.sin(t1 * 0.9) * 0.04;
+          // ---- Mano DERECHA sobre el ratón: gesto de CLICK ----
+          // Cada ~1.3s hace una pulsación corta (dip + leve inclinación)
+          const clickCycle = (totalTime % 1.3) / 1.3;          // 0..1
+          let clickDip = 0, clickTilt = 0;
+          if (clickCycle < 0.09) {                            // ventana de click ~120ms
+            const p = clickCycle / 0.09;                      // 0..1 dentro del click
+            const env = Math.sin(p * Math.PI);                // envelope 0→1→0
+            clickDip  = env * 0.022;                          // baja 22mm
+            clickTilt = env * 0.18;                           // inclina los dedos hacia abajo
+          }
+          // Doble-click ocasional (~cada 6-8s) para más realismo
+          const dbl = (totalTime % 6.7) < 0.25;
+          if (dbl && clickCycle > 0.5 && clickCycle < 0.7) {
+            const p = (clickCycle - 0.5) / 0.2;
+            const env = Math.sin(p * Math.PI);
+            clickDip  = Math.max(clickDip,  env * 0.022);
+            clickTilt = Math.max(clickTilt, env * 0.18);
+          }
+          rightHand.position.y = -0.4 - clickDip;
+          rightHand.rotation.x = -0.05 - clickTilt;           // -0.05 = leve inclinación base de "agarre"
+          // Antebrazo derecho: sway sutil sincronizado
+          rightForearm.rotation.x = -0.5 + Math.sin(totalTime * 3.1) * 0.018 - clickDip * 1.4;
+
+          // ---- Mano IZQUIERDA sobre el teclado: gesto de TECLEO ----
+          // Bobs rápidos (~10-14 Hz) + leve oleaje aleatorio para que no parezca metrónomo
+          // Combina dos sinusoides a frecuencias distintas + ruido lento
+          const typeBeat = Math.sin(totalTime * 12) * Math.sin(totalTime * 7.3);
+          const typeWobble = Math.sin(totalTime * 2.1) * 0.003;
+          const typeDip = typeBeat * 0.012 + typeWobble;       // amplitud ~12-15mm
+          leftHand.position.y = -0.4 + typeDip;
+          // Inclinación sutil de los dedos siguiendo el tecleo
+          leftHand.rotation.x = 0.05 - Math.abs(typeBeat) * 0.12;
+          // Antebrazo izquierdo: sway suave
+          leftForearm.rotation.x = -0.5 + Math.sin(totalTime * 2.7) * 0.015;
         }
 
         // Auto-rotate suave
