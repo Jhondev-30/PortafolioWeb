@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hola, soy Jhon Alex Cordero 👋
+# Hola, soy Jhon Alex Cordero 
 
 **Backend Developer · Barquisimeto, Venezuela 🇻🇪**
 
@@ -15,16 +15,16 @@ no demos. APIs robustas, control de acceso, inventarios y puntos de venta.
 
 ---
 
-## 🚀 Sobre mí
+## Sobre mí
 
 ```yaml
-👤  Nombre:      Jhon Alex Cordero Perozo
-📍  Base:        Barquisimeto, Venezuela
-🎓  Formación:   Ing. Informática · UCLA
-🌐  Idiomas:     Español nativo · Inglés B2
-💼  Modalidad:   Remoto global
-⚙️  Stack:       Node.js · Go · PostgreSQL · Docker
-🎯  Foco:        Backend escalable · APIs REST · Arquitectura limpia
+  Nombre: Jhon Alex Cordero Perozo
+  Base: Barquisimeto, Venezuela
+  Formación: Ing. Informática · UCLA
+  Idiomas: Español nativo · Inglés B2
+  Modalidad: Remoto global
+  Stack: Node.js · Go · PostgreSQL · Docker
+  Foco: Backend escalable · APIs REST · Arquitectura limpia
 ```
 
 > *"No construyo demos: entrego sistemas de nivel productivo que automatizan
@@ -32,7 +32,7 @@ no demos. APIs robustas, control de acceso, inventarios y puntos de venta.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -60,7 +60,7 @@ no demos. APIs robustas, control de acceso, inventarios y puntos de venta.
 
 ---
 
-## ⭐ Proyecto destacado
+## Proyecto destacado
 
 <table>
 <tr>
@@ -72,45 +72,45 @@ no demos. APIs robustas, control de acceso, inventarios y puntos de venta.
 </td>
 <td>
 
-### 🏋️ SmartGym — Plataforma de Gestión para Gimnasios
+### SmartGym — Plataforma de Gestión para Gimnasios
 
 API REST completa para la gestión integral de gimnasios: membresías,
 control de acceso, asistencia, pagos y reportería.
 
-- 🔐 Autenticación JWT con refresh tokens
-- 📊 Endpoints documentados con Swagger/OpenAPI
-- 🐳 Desplegado con Docker + PostgreSQL
-- ⚡ Arquitectura limpia en capas (routes → controllers → services → repos)
+- Autenticación JWT con refresh tokens
+- Endpoints documentados con Swagger/OpenAPI
+- Desplegado con Docker + PostgreSQL
+- Arquitectura limpia en capas (routes → controllers → services → repos)
 
 </td>
 </tr>
 </table>
 
-🔗 **Repositorio:** [Jhondev-30/API-Smartgym](https://github.com/Jhondev-30/API-Smartgym)
+ **Repositorio:** [Jhondev-30/API-Smartgym](https://github.com/Jhondev-30/API-Smartgym)
 
 ---
 
-## 💼 Lo que entrego
+## Lo que entrego
 
 <table>
 <tr>
 <td align="center" width="33%">
 
-### 🏗️ Backend escalable
+### Backend escalable
 APIs REST bien estructuradas, listas para producción, con autenticación,
 validación y manejo de errores consistente.
 
 </td>
 <td align="center" width="33%">
 
-### 🧱 Arquitectura limpia
+### Arquitectura limpia
 Código separado por capas, fácil de mantener y extender.
 Tests donde importan, no donde estorban.
 
 </td>
 <td align="center" width="33%">
 
-### 🔒 Seguridad por diseño
+### Seguridad por diseño
 JWT, roles, rate limiting, validación de inputs,
 secrets fuera del código y dependencias actualizadas.
 
@@ -120,16 +120,16 @@ secrets fuera del código y dependencias actualizadas.
 
 ---
 
-## 📌 Otros proyectos & código
+## Otros proyectos & código
 
-| 📦 Repo | 📝 Descripción |
+| Repo | Descripción |
 |---|---|
-| [API-Smartgym](https://github.com/Jhondev-30/API-Smartgym) | 🏋️ API REST para gestión de gimnasios |
-| _(más repos próximamente…)_ | 🚧 Trabajando en ellos |
+| [API-Smartgym](https://github.com/Jhondev-30/API-Smartgym) | API REST para gestión de gimnasios |
+| _(más repos próximamente…)_ | Trabajando en ellos |
 
 ---
 
-## 📫 Contacto
+## Contacto
 
 <div align="center">
 
@@ -144,8 +144,8 @@ secrets fuera del código y dependencias actualizadas.
 
 <div align="center">
 
-**Hecho con disciplina, café ☕ y mucho código.**
+**Hecho con disciplina, café y mucho código.**
 
-`⭐ Si te sirve algo de lo que ves por aquí, dejame una estrella en los repos.`
+` Si te sirve algo de lo que ves por aquí, dejame una estrella en los repos.`
 
 </div>
