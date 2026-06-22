@@ -108,17 +108,17 @@
       if (v && v.startsWith('#')) return hexToNum(v);
       return fallback;
     };
-    let ACCENT = themeCol('--accent', 0xff2e3a);
-    let ACCENT_2 = themeCol('--accent-2', 0xd60f1f);
-    let ACCENT_3 = themeCol('--accent-3', 0x1d4e3e);
+    let ACCENT = themeCol('--accent', 0x1b6e4a);
+    let ACCENT_2 = themeCol('--accent-2', 0x0d4d31);
+    let ACCENT_3 = themeCol('--accent-3', 0xb8442c);
 
     // Re-leer colores del tema cuando el usuario cambia red↔dark.
     // Los meshes ya creados conservan sus materiales (la escena 3D es estática);
     // esto mantiene los fallbacks sincronizados si la escena se reinicia.
     document.documentElement.addEventListener('themechange', function () {
-      ACCENT = themeCol('--accent', 0xff2e3a);
-      ACCENT_2 = themeCol('--accent-2', 0xd60f1f);
-      ACCENT_3 = themeCol('--accent-3', 0x1d4e3e);
+      ACCENT = themeCol('--accent', 0x1b6e4a);
+      ACCENT_2 = themeCol('--accent-2', 0x0d4d31);
+      ACCENT_3 = themeCol('--accent-3', 0xb8442c);
     });
 
     const M = {

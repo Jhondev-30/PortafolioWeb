@@ -17,6 +17,8 @@
     const label = document.getElementById('themeLabel');
 
     let saved = localStorage.getItem('jhon-theme');
+    // Compat: si quedó el viejo valor "red" del tema anterior, lo tratamos como "light"
+    if (saved === 'red') saved = 'light';
     if (!saved) {
       saved = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
@@ -26,11 +28,11 @@
     function applyTheme(next) {
       root.setAttribute('data-theme', next);
       localStorage.setItem('jhon-theme', next);
-      if (label) label.textContent = next === 'dark' ? 'Dark' : 'Red';
+      if (label) label.textContent = next === 'dark' ? 'Dark' : 'Light';
 
       // Actualiza el theme-color del navegador (la barrita en mobile)
       var meta = document.querySelector('meta[name="theme-color"]:not([media])');
-      if (meta) meta.setAttribute('content', next === 'dark' ? '#0a0e1f' : '#faf3f0');
+      if (meta) meta.setAttribute('content', next === 'dark' ? '#0a0e1f' : '#f4f0e6');
 
       // Avisa al resto del sitio (ej. hero-3d.js) para que re-lea variables CSS
       root.dispatchEvent(new CustomEvent('themechange', { detail: { theme: next } }));
@@ -40,7 +42,7 @@
 
     if (toggle) {
       toggle.addEventListener('click', function () {
-        applyTheme(root.getAttribute('data-theme') === 'dark' ? 'red' : 'dark');
+        applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
       });
     }
   }
@@ -225,5 +227,5 @@
     if (sec) activeObs.observe(sec);
   });
 
-  console.log('%c⟨/⟩ Jhon Alex Cordero', 'font: 700 22px Georgia; color:#ff2e3a; padding:8px;');
+  console.log('%c⟨/⟩ Jhon Alex Cordero', 'font: 700 22px Georgia; color:#1b6e4a; padding:8px;');
 })();
