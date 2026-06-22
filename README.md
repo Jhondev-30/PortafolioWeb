@@ -60,7 +60,9 @@ no demos. APIs robustas, control de acceso, inventarios y puntos de venta.
 
 ---
 
-## ⭐ Proyecto destacado
+## ⭐ Proyectos destacados
+
+### 🏋️ SmartGym — Plataforma de Gestión para Gimnasios
 
 <table>
 <tr>
@@ -68,11 +70,10 @@ no demos. APIs robustas, control de acceso, inventarios y puntos de venta.
 
 ![Status](https://img.shields.io/badge/Status-Producción-22c55e?style=flat-square)
 ![API](https://img.shields.io/badge/Tipo-API%20REST-3b82f6?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-Node%20%C2%B7%20Postgres-22c55e?style=flat-square)
 
 </td>
 <td>
-
-### 🏋️ SmartGym — Plataforma de Gestión para Gimnasios
 
 API REST completa para la gestión integral de gimnasios: membresías,
 control de acceso, asistencia, pagos y reportería.
@@ -87,6 +88,36 @@ control de acceso, asistencia, pagos y reportería.
 </table>
 
 🔗 **Repositorio:** [Jhondev-30/API-Smartgym](https://github.com/Jhondev-30/API-Smartgym)
+
+---
+
+### 🎤 Despierta '26 — Landing Page para Evento
+
+<table>
+<tr>
+<td width="200">
+
+![Status](https://img.shields.io/badge/Status-Desplegado-1b6e4a?style=flat-square)
+![Tipo](https://img.shields.io/badge/Tipo-Landing%20Page-b08820?style=flat-square)
+![Stack](https://img.shields.io/badge/Stack-HTML%20%C2%B7%20CSS%20%C2%B7%20JS-0d4d31?style=flat-square)
+
+</td>
+<td>
+
+Single-page editorial para un evento ficticio de conferencia motivacional.
+Diseño premium tipo portada de libro — paleta verde esmeralda, tipografía
+serif variable, animaciones nativas.
+
+- 🎨 Sistema de diseño propio — paleta *editorial verde*, sin frameworks
+- ⚡ Vanilla HTML/CSS/JS — cero dependencias más allá de Google Fonts
+- 📱 Responsive + accesible (Lighthouse > 90 perf, > 95 a11y)
+- 🖼️ Imágenes generadas con IA · desplegado en Cloudflare Pages
+
+</td>
+</tr>
+</table>
+
+🔗 **Repositorio:** [Jhondev-30/Despierta](https://github.com/Jhondev-30/Despierta) · 🌐 **Demo en vivo:** [despierta.pages.dev](https://despierta.pages.dev/)
 
 ---
 
@@ -124,7 +155,6 @@ secrets fuera del código y dependencias actualizadas.
 
 | 📦 Repo | 📝 Descripción |
 |---|---|
-| [API-Smartgym](https://github.com/Jhondev-30/API-Smartgym) | 🏋️ API REST para gestión de gimnasios |
 | _(más repos próximamente…)_ | 🚧 Trabajando en ellos |
 
 ---

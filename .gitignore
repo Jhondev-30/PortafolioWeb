@@ -2,7 +2,16 @@
 _static_server.cjs
 *.ps1
 shots/
+.tmp-screenshot/
 .mavis-agent/
+_strip_emojis.cjs
+_tmp_query.json
+_youtube-*.jpg
+_yt-original.jpg
+
+# Server runtime
+*.log
+*.err
 
 # OS
 .DS_Store
