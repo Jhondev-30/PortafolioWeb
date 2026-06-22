@@ -2140,3 +2140,46 @@ img, svg { max-width: 100%; display: block; }
   color: var(--bg-dark);
   border-color: var(--text-light);
 }
+
+/* ========================================================================
+   DESPIERTA '26 — paleta editorial verde esmeralda
+   ======================================================================== */
+.bento-tag.despierta {
+  background: linear-gradient(135deg, #1b6e4a 0%, #0d4d31 100%);
+  color: #f4f0e6;
+  border: none;
+}
+
+.bento-card.bento-despierta {
+  background:
+    linear-gradient(180deg, rgba(232, 225, 207, 0.6) 0%, transparent 100%),
+    radial-gradient(ellipse at top right, rgba(27, 110, 74, 0.10) 0%, transparent 60%);
+  border-color: rgba(27, 110, 74, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+.bento-card.bento-despierta::before {
+  background: radial-gradient(
+    400px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(27, 110, 74, 0.12) 0%,
+    transparent 60%
+  );
+}
+.bento-despierta .tb-label.despierta {
+  background: rgba(12, 31, 23, 0.88);
+  color: #b08820;
+  border: 1px solid rgba(176, 136, 32, 0.35);
+}
+.bento-despierta .tb-screens {
+  background: #0c1f17;
+}
+.bento-despierta .tb-screen {
+  background: #0a1812;
+}
+
+[data-theme="dark"] .bento-card.bento-despierta {
+  background:
+    linear-gradient(180deg, rgba(27, 110, 74, 0.10) 0%, transparent 100%),
+    var(--bg-card);
+  border-color: rgba(27, 110, 74, 0.4);
+}
