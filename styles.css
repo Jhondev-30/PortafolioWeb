@@ -27,10 +27,10 @@
   --text-light: #f9f5e8;
 
   /* Accent system — emerald primario, terracotta + ámbar como soporte */
-  --accent: #1b6e4a; /* jewel emerald — principal */
-  --accent-2: #0d4d31; /* deep forest emerald — hover/press */
-  --accent-3: #b8442c; /* terracotta — status dot, secondary highlights */
-  --accent-4: #b08820; /* amber gold — chips, highlights */
+  --accent: #1b6e4a;        /* jewel emerald — principal */
+  --accent-2: #0d4d31;      /* deep forest emerald — hover/press */
+  --accent-3: #b8442c;      /* terracotta — status dot, secondary highlights */
+  --accent-4: #b08820;      /* amber gold — chips, highlights */
   --accent-soft: rgba(27, 110, 74, 0.12);
 
   --radius: 20px;
@@ -63,26 +63,26 @@
 
 [data-theme="dark"] {
   /* ===== TEMA DARK — azul-noche con color indigo ===== */
-  --bg: #0a0e1f; /* azul-noche profundo — NO negro plano */
+  --bg: #0a0e1f;            /* azul-noche profundo — NO negro plano */
   --bg-soft: #0f1424;
-  --bg-card: #141a30; /* card un escalón arriba del bg */
+  --bg-card: #141a30;        /* card un escalón arriba del bg */
   --bg-elev: #1a2040;
-  --bg-dark: #050813; /* fondo del CTA: aún más profundo */
+  --bg-dark: #050813;        /* fondo del CTA: aún más profundo */
 
   --line: rgba(180, 190, 230, 0.08);
   --line-strong: rgba(180, 190, 230, 0.16);
   --line-soft: rgba(180, 190, 230, 0.04);
 
-  --text: #e8eaf5; /* blanco cálido-azulado, no puro */
+  --text: #e8eaf5;           /* blanco cálido-azulado, no puro */
   --text-mid: #9aa1bd;
   --text-dim: #5d6585;
   --text-light: #f8f9fc;
 
   /* Acento indigo brillante — destaca sobre el fondo azul-noche */
-  --accent: #818cf8; /* indigo-400 */
-  --accent-2: #6366f1; /* indigo-500 */
-  --accent-3: #22d3ee; /* cyan-400 */
-  --accent-4: #fbbf24; /* ámbar cálido */
+  --accent: #818cf8;         /* indigo-400 */
+  --accent-2: #6366f1;       /* indigo-500 */
+  --accent-3: #22d3ee;       /* cyan-400 */
+  --accent-4: #fbbf24;       /* ámbar cálido */
   --accent-soft: rgba(129, 140, 248, 0.14);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.20);
@@ -471,7 +471,7 @@ img, svg { max-width: 100%; display: block; }
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.06);
   animation: floatCard 4s ease-in-out infinite;
-  pointer-events: none; /* no roba los mousedown al canvas — la rotación funciona en toda el área */
+  pointer-events: none;     /* no roba los mousedown al canvas — la rotación funciona en toda el área */
 }
 @keyframes floatCard {
   0%, 100% { transform: rotate(2deg) translateY(0); }
@@ -1398,7 +1398,7 @@ img, svg { max-width: 100%; display: block; }
 
 @keyframes techScroll {
   from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-33.3333%, 0, 0); }
+  to   { transform: translate3d(-33.3333%, 0, 0); }
 }
 
 .tech-item {
@@ -1784,8 +1784,8 @@ img, svg { max-width: 100%; display: block; }
     min-height: 240px;
   }
   .hero-3d-wrapper { min-height: 240px; }
-  .hero-3d-card { display: none; } /* overlay 200px: se come el canvas en mobile */
-  .hero-3d-hint { display: none; } /* "mueve el cursor" no aplica en touch */
+  .hero-3d-card { display: none; }      /* overlay 200px: se come el canvas en mobile */
+  .hero-3d-hint { display: none; }      /* "mueve el cursor" no aplica en touch */
   .hero-badge { font-size: 11px; padding: 6px 10px; margin-bottom: 24px; gap: 8px; }
   .hero-meta { gap: 24px; margin-bottom: 48px; }
   .hero-title { margin-bottom: 32px; }
@@ -1956,7 +1956,7 @@ img, svg { max-width: 100%; display: block; }
 
 /* ========================================================================
    FIX MODO DARK — botones con fondo claro/texto claro (invisibles)
-   En light funcionan bien; en dark hay que invertir fondotexto.
+   En light funcionan bien; en dark hay que invertir fondo↔texto.
    ======================================================================== */
 
 /* Nav CTA (botón GitHub del navbar) */
