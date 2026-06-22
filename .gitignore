@@ -1,0 +1,13 @@
+# Testing artifacts (no subirlos)
+_static_server.cjs
+*.ps1
+shots/
+.mavis-agent/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
